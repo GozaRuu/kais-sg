@@ -2,3 +2,13 @@
   X-Content-Type-Options: nosniff
   X-Frame-Options: DENY
   Referrer-Policy: strict-origin-when-cross-origin
+
+/china26
+  X-Robots-Tag: noindex, nofollow
+
+/china26.html
+  X-Robots-Tag: noindex, nofollow
+
+/c26/*
+  X-Robots-Tag: noindex
+  Cache-Control: public, max-age=604800
