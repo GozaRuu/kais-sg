@@ -54,8 +54,21 @@
     }
 
     .poster {
-      position: relative;
-      padding: 4vh 3vw 0;
+      max-width: 54rem;
+      margin: 0 auto;
+      padding: 4vh 4vw 16vh;
+    }
+
+    .rows { position: relative; }
+
+    .photo {
+      position: absolute;
+      top: 48%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: clamp(14rem, 44%, 22rem);
+      z-index: 2;
+      display: block;
     }
 
     .row {
@@ -97,14 +110,6 @@
       font-family: "Hiragino Mincho ProN", "Yu Mincho", "Noto Serif JP", serif;
     }
 
-    footer {
-      padding: 12vh 3vw 2rem;
-      font-size: 0.7rem;
-      letter-spacing: 0.08em;
-    }
-
-    footer a { color: inherit; }
-
     .visually-hidden {
       position: absolute;
       width: 1px; height: 1px;
@@ -119,12 +124,15 @@
   <h1 class="visually-hidden">KSG — Kais, aka GozaRuu — just some dude in Berlin. 捨, upekkhā, equanimity.</h1>
 
   <main class="poster" aria-hidden="true">
-    <div class="row"><span>KSG</span><span>GOZARUU</span></div>
-    <div class="row"><span>KSG</span><span>KAIS</span></div>
-    <div class="row"><span>KSG</span><span>BERLIN</span></div>
-    <div class="row"><span>KSG</span><span>GOZARUU</span></div>
-    <div class="row"><span>KSG</span><span>KAIS</span></div>
-    <div class="row"><span>KSG</span><span>BERLIN</span></div>
+    <div class="rows">
+      <div class="row"><span>KSG</span><span>GOZARUU</span></div>
+      <div class="row"><span>KSG</span><span>KAIS</span></div>
+      <div class="row"><span>KSG</span><span>BERLIN</span></div>
+      <div class="row"><span>KSG</span><span>GOZARUU</span></div>
+      <div class="row"><span>KSG</span><span>KAIS</span></div>
+      <div class="row"><span>KSG</span><span>BERLIN</span></div>
+      <img class="photo" src="/first-one-there.jpeg" alt="">
+    </div>
 
     <div class="whichone">
       <div class="stack" lang="ja">
@@ -151,10 +159,6 @@
       </div>
     </div>
   </main>
-
-  <footer>
-    <a href="https://github.com/GozaRuu" rel="me">GOZARUU</a> / BERLIN
-  </footer>
 
 </body>
 </html>
