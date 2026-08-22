@@ -121,11 +121,12 @@
       position: relative;
     }
 
+    /* pinned to the viewport so it hugs the real right edge */
     .photo2 {
-      position: absolute;
-      right: 1%;
-      top: 40%;
-      width: min(52%, 56svh);
+      position: fixed;
+      right: 2vw;
+      top: 58svh;
+      width: min(38vw, 56svh);
       z-index: 2;
       display: block;
     }
