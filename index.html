@@ -33,7 +33,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@500;700&display=swap" rel="stylesheet">
 
   <style>
     :root {
@@ -56,7 +56,15 @@
     .poster {
       max-width: 54rem;
       margin: 0 auto;
-      padding: 4vh 4vw 16vh;
+      padding: 4vh 4vw 0;
+    }
+
+    footer {
+      max-width: 54rem;
+      margin: 0 auto;
+      padding: 12vh 4vw 2.5rem;
+      font-size: 0.7rem;
+      letter-spacing: 0.08em;
     }
 
     .rows { position: relative; }
@@ -82,13 +90,19 @@
       letter-spacing: 0.01em;
     }
 
-    /* ragged offsets, one per row */
-    .row:nth-of-type(1) { padding-left: 3%;  padding-right: 2%; }
-    .row:nth-of-type(2) { padding-left: 0;   padding-right: 6%; }
-    .row:nth-of-type(3) { padding-left: 4%;  padding-right: 0; }
-    .row:nth-of-type(4) { padding-left: 1%;  padding-right: 4%; }
-    .row:nth-of-type(5) { padding-left: 5%;  padding-right: 1%; }
-    .row:nth-of-type(6) { padding-left: 0;   padding-right: 3%; }
+    /* right side: half the boldness — the cover's two modes */
+    .row span:last-child {
+      font-family: "Archivo", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-weight: 700;
+    }
+
+    /* left column flush, only the first row off; right stays ragged */
+    .row:nth-of-type(1) { padding-left: 7%;  padding-right: 2%; }
+    .row:nth-of-type(2) { padding-right: 6%; }
+    .row:nth-of-type(3) { padding-right: 0; }
+    .row:nth-of-type(4) { padding-right: 4%; }
+    .row:nth-of-type(5) { padding-right: 1%; }
+    .row:nth-of-type(6) { padding-right: 3%; }
 
     .whichone {
       margin-top: 12vh;
@@ -159,6 +173,8 @@
       </div>
     </div>
   </main>
+
+  <footer>LET GO / BERLIN</footer>
 
 </body>
 </html>
