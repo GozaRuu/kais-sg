@@ -397,7 +397,7 @@ const FLIGHTS = [
     {id:"c7", nm:"Jeju Air, evening", sub:"20:10 → 23:35 · a full last Seoul day; bag costs extra.", eur:69, lv:"live", site:"https://www.jejuair.net/"},
     {id:"tw", nm:"t'way TW643", sub:"08:55 → 12:05 · 15 kg on the Smart fare, never the Event tier.", eur:117, lv:"live", site:"https://www.twayair.com/app/booking/searchItinerary?tripType=OW&depAirportCode=ICN&arrAirportCode=HKG&regionCode=SG&langCode=en-US"},
     {id:"ke", nm:"Korean Air, full service", sub:"20:00 → 23:10 · the plush evening option, bag included.", eur:166, lv:"live", site:"https://www.koreanair.com/"}],
-   book:[["Google Flights","https://www.google.com/travel/flights?q=one%20way%20flights%20from%20ICN%20to%20HKG%20on%202026-10-26&curr=EUR"],["Skyscanner ×2","https://www.skyscanner.de/transport/flights/icn/hkg/261026/?adults=2&cabinclass=economy"],["Trip.com ×2","https://www.trip.com/flights/showfarefirst?dcity=icn&acity=hkg&ddate=2026-10-26&triptype=ow&class=y&quantity=2"]], seats:"2 seats — KSG + SKG, one booking"},
+   book:[["Google Flights","https://www.google.com/travel/flights?q=one%20way%20flights%20from%20ICN%20to%20HKG%20on%202026-10-26&curr=EUR"],["Skyscanner","https://www.skyscanner.de/transport/flights/icn/hkg/261026/?adults=1&cabinclass=economy"],["Trip.com","https://www.trip.com/flights/showfarefirst?dcity=icn&acity=hkg&ddate=2026-10-26&triptype=ow&class=y&quantity=1"]], seats:"1 seat — each books his own; SKG matches this flight"},
   {key:"ret", route:"Beijing → Frankfurt", date:"Mon 9 Nov", opts:[
     {id:"ca", nm:"Air China CA957, nonstop", sub:"Daxing ~14:30 → Frankfurt ~18:15 the same evening · 10h45 · 777. Daytime, no red-eye; Berlin by midnight. Departs Daxing — the Capital nonstop costs double.", eur:423, lv:"live", rec:true, site:"https://www.airchina.de/DE/GB/Home"},
     {id:"mu", nm:"China Eastern, via Shanghai", sub:"20:30 → 05:45 next morning · 16h15 · the overnight; Berlin by ~11:00 on the 10th.", eur:349, lv:"live", site:"https://www.ceair.com/"},
@@ -568,7 +568,7 @@ function refresh(){
   document.getElementById('t-num').innerHTML = `€${(per*m).toLocaleString('en')}${crew?' <em>×3</em>':''}`;
   document.getElementById('t-note').innerHTML = crew
     ? `Rows stay per seat; the total is ×3 — rough on purpose, since SKG and SKN book their own long-hauls.`
-    : `OZ542 is booked — with it locked, the remaining swing is €1,364–1,558. SKG and SKN book their own long-hauls; the shared legs are linked above. The ledger below adds the ground: ≈ €3,040–3,415 all-in for KSG.`;
+    : `OZ542 is booked — with it locked, the remaining swing is €1,364–1,558. Everyone books his own seats — SKG and SKN mirror the shared flights, links above. The ledger below adds the ground: ≈ €3,040–3,415 all-in for KSG.`;
 }
 document.getElementById('pp').onclick = e=>{crew=false;e.target.classList.add('on');document.getElementById('p4').classList.remove('on');refresh();};
 document.getElementById('p4').onclick = e=>{crew=true;e.target.classList.add('on');document.getElementById('pp').classList.remove('on');refresh();};
