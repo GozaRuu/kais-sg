@@ -281,7 +281,7 @@ footer .cr{font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;text-tr
     <span class="paxsw"><button id="pp" class="on">KSG solo</button><button id="p4">×3 crew</button></span>
   </div>
   <div id="rc-rows"></div>
-  <div class="rc-total"><span class="lbl">KSG's transport</span><span class="val" id="t-num">€1,528</span></div>
+  <div class="rc-total"><span class="lbl">KSG's transport</span><span class="val" id="t-num">€1,570</span></div>
   <div class="totalnote" id="t-note"></div>
 </div>
 
@@ -292,8 +292,8 @@ footer .cr{font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;text-tr
   <div class="lg-total">
     <div><div class="lbl">Korea, on the ground</div><div class="big">€540–670</div></div>
     <div><div class="lbl">China, on the ground</div><div class="big">€1,010–1,260</div></div>
-    <div><div class="lbl">+ KSG's transport</div><div class="big">€1,528</div></div>
-    <div><div class="lbl">All-in, KSG</div><div class="big" style="color:var(--accent)">€3,080–3,450</div></div>
+    <div><div class="lbl">+ KSG's transport</div><div class="big">€1,570</div></div>
+    <div><div class="lbl">All-in, KSG</div><div class="big" style="color:var(--accent)">€3,120–3,495</div></div>
   </div>
   <div class="lg-note">Hotels €800 + food €695 + tickets €300 + local transport €120 ≈ €93/day is the comfortable ceiling; twin-share budget hotels, street-food-heavy days and skipping a paid deck or two run nearer €74/day — €1,550 for the 21 days. The tier cliff is real: a restaurant beer is €6.30 in Hong Kong, €3.10 in Seoul, ~€1.20 everywhere in the mainland — plan the big nights west of the border. Booking order: Seoul first (late-Oct foliage peak), then Shenzhen (Canton-Fair spillover), then HK; the four inland cities are shoulder-season and can wait, booked refundable. All mainland hotels via Trip.com's English site — it only surfaces foreigner-accepting houses, and every guest is passport-registered, so book 3 named guests.</div>
 </div>
@@ -387,7 +387,7 @@ const DAYS = [
 ];
 const FLIGHTS = [
   {key:"out", route:"Frankfurt → Seoul", date:"Tue 20 Oct", opts:[
-    {id:"oz", nm:"Asiana OZ542, nonstop", sub:"19:40 → 14:35 next day · 11h55 · A350 · 23 kg included. The evening departure the train day needs.", eur:697, lv:"live", rec:true, site:"https://flyasiana.com/C/DE/EN/index"},
+    {id:"oz", nm:"Asiana OZ542, nonstop", sub:"19:40 → 14:35 next day · 11h55 · A350 · 23 kg included. Ticketed 22 Aug, Standard fare.", eur:739, lv:"booked ✓", rec:true, site:"https://flyasiana.com/C/DE/EN/index"},
     {id:"qr", nm:"Qatar, via Doha", sub:"17:15 → 17:05 next day · 16h50 · bag included.", eur:569, lv:"live", site:"https://www.qatarairways.com/"},
     {id:"ey", nm:"Etihad, via Abu Dhabi", sub:"21:55 → 22:15 next day · 17h20 · the floor; lands late, day one gone.", eur:445, lv:"live", site:"https://www.etihad.com/"},
     {id:"lh", nm:"Lufthansa, nonstop", sub:"15:35 → 09:55 next day · 11h20 · Light fare, bag ≈ +€65.", eur:799, lv:"live", site:"https://www.lufthansa.com/de/en/flight-search"}],
@@ -476,7 +476,7 @@ const CHAPTERS = [
    next:"→ Air China CA957 · Beijing Daxing → Frankfurt · Mon 9 Nov · ~14:30 – 18:15 · then the ICE home, Berlin around midnight"}
 ];
 const RUNBOOK = [
-  ["Now — this week","p0","KSG books the three flights above: FRA→Seoul solo, the hop ×2 with SKG, Beijing→FRA solo. <small>Passports first: KSG + SKN valid past May 2027, two blank pages.</small>"],
+  ["Now — this week","p0","KSG books the three flights: <b>FRA→Seoul ✓ booked 22 Aug (OZ542, €739)</b>; still open — the hop ×2 with SKG, Beijing→FRA solo. <small>Passports first: KSG + SKN valid past May 2027, two blank pages.</small>"],
   ["Now — same message","p0","SKG books San Francisco → Seoul for the 20th <small>(he's waiting on your confirmation — then: <a href='https://www.google.com/travel/flights?q=flights%20from%20SFO%20to%20ICN%20on%202026-10-20' target='_blank' rel='noopener'>SFO → ICN on Google Flights</a>)</small> — and files his <b>China visa</b>: 10-year L tourist visa at the SF consulate — <a href='https://cova.mfa.gov.cn/' target='_blank' rel='noopener'>COVA form online</a>, walk-in, $140, ~4 business days. Verified: the 240-hour transit does NOT cover our ~12-day stay (footnote ¹⁰)."],
   ["Now — the Hush funnel","p0","Factory visits only happen if the outreach starts NOW: Alibaba/1688 supplier contact + samples by early Sept, shortlist 3–5, a China-enforceable NNN (in Chinese) with 1–2 finalists by mid-Sept, visit slots locked 2–3 weeks out, WeChat reconfirm at 1 week and 24 h. <small>And register the Hush trademark in China before broad outreach — it's first-to-file. Plan B needs zero appointments: a full Huaqiangbei walk-in day.</small>"],
   ["Sept — in this order","p1","Hotels on <a href='https://www.trip.com/hotels/' target='_blank' rel='noopener'>Trip.com</a>: <b>Seoul first</b> (late Oct = peak foliage), then Shenzhen (Canton-Fair spillover), then HK; the four inland cities are shoulder season — book refundable, 4–6 weeks out. <small>None in Guangzhou. Mainland hotels handle police registration; book 3 named guests, passports on file. Districts + rates in the ledger.</small>"],
@@ -568,7 +568,7 @@ function refresh(){
   document.getElementById('t-num').innerHTML = `€${(per*m).toLocaleString('en')}${crew?' <em>×3</em>':''}`;
   document.getElementById('t-note').innerHTML = crew
     ? `Rows stay per seat; the total is ×3 — rough on purpose, since SKG and SKN book their own long-hauls.`
-    : `Floor ≈ €1,150, ceiling ≈ €1,698 across all combos. SKG and SKN book their own long-hauls; the shared legs are linked above. The ledger below adds the ground: ≈ €3,080–3,450 all-in for KSG.`;
+    : `OZ542 is booked — with it locked, the remaining swing is €1,444–1,638. SKG and SKN book their own long-hauls; the shared legs are linked above. The ledger below adds the ground: ≈ €3,120–3,495 all-in for KSG.`;
 }
 document.getElementById('pp').onclick = e=>{crew=false;e.target.classList.add('on');document.getElementById('p4').classList.remove('on');refresh();};
 document.getElementById('p4').onclick = e=>{crew=true;e.target.classList.add('on');document.getElementById('pp').classList.remove('on');refresh();};
