@@ -271,13 +271,14 @@ footer .cr{font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;text-tr
 </div>
 
 <div class="plate" id="plate-ledger">
-  <div class="plate-label"><b>Plate III</b> — The ledger · what it actually costs, per person · hotel rates are live "from"-quotes, the rest ±15%</div>
+  <div class="plate-label"><b>Plate III</b> — The ledger · what it actually costs — KSG's numbers, everyone's flights differ · hotel rates are live "from"-quotes, the rest ±15%</div>
   <div class="lg-head"><span>City</span><span style="text-align:right">Nights</span><span>Sleep in</span><span style="text-align:right">Hotel /nt</span><span style="text-align:right">Food /day</span><span style="text-align:right">Total</span></div>
   <div id="lg-rows"></div>
   <div class="lg-total">
-    <div><div class="lbl">On the ground, 21 days</div><div class="big">€1,550–1,925</div></div>
+    <div><div class="lbl">Korea, on the ground</div><div class="big">€540–670</div></div>
+    <div><div class="lbl">China, on the ground</div><div class="big">€1,010–1,260</div></div>
     <div><div class="lbl">+ KSG's transport</div><div class="big">€1,528</div></div>
-    <div><div class="lbl">All-in, per person</div><div class="big" style="color:var(--accent)">€3,080–3,450</div></div>
+    <div><div class="lbl">All-in, KSG</div><div class="big" style="color:var(--accent)">€3,080–3,450</div></div>
   </div>
   <div class="lg-note">Hotels €800 + food €695 + tickets €300 + local transport €120 ≈ €93/day is the comfortable ceiling; twin-share budget hotels, street-food-heavy days and skipping a paid deck or two run nearer €74/day — €1,550 for the 21 days. The tier cliff is real: a restaurant beer is €6.30 in Hong Kong, €3.10 in Seoul, ~€1.20 everywhere in the mainland — plan the big nights west of the border. Booking order: Seoul first (late-Oct foliage peak), then Shenzhen (Canton-Fair spillover), then HK; the four inland cities are shoulder-season and can wait, booked refundable. All mainland hotels via Trip.com's English site — it only surfaces foreigner-accepting houses, and every guest is passport-registered, so book 3 named guests.</div>
 </div>
@@ -304,7 +305,7 @@ footer .cr{font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;text-tr
 
 <footer>
   <div class="fin">fin. <span class="sc" style="font-style:normal;font-size:30px">完</span></div>
-  <div class="cr">Researched 22 Aug 2026 · two agent fleets, 523 web lookups · long-haul fares are live quotes, China internals ±15%<br>Everything re-checks itself at the 25 Oct winter-schedule switch</div>
+  <div class="cr">The good men are reuniting in the East<br>for inspiration, technology and spicy food</div>
 </footer>
 
 <script>// https://d3js.org v7.9.0 Copyright 2010-2023 Mike Bostock
@@ -391,7 +392,7 @@ const FLIGHTS = [
 const FIXED = 310; /* D964 sleeper berth €88 + rail & border €147 + ICE ×2 €75 */
 const CHAPTERS = [
   {id:"ch-sel", no:"01", key:"SEL", city:"Seoul", cjk:"서울", cls:"kr", lang:"ko-KR", phon:"suh-OOL", line:"Palace mornings, market nights, five days on Enok's turf.",
-   img:"seoul", dates:"21 — 26 Oct", nights:"5", arrive:"OZ542, lands 14:35", eat:"Gwangjang Market", sleep:"Myeongdong · twin ≈ €65 pp", burn:"≈ €133/day pp",
+   img:"seoul", dates:"21 — 26 Oct", nights:"5", arrive:"OZ542, lands 14:35", eat:"Gwangjang Market", sleep:"Myeongdong · twin ≈ €65 pp", burn:"≈ €133/day",
    see:[["DMZ half-day tour","€52","book a licensed operator ahead"],["N Seoul Tower deck","€19","dusk slot"],["Gyeongbokgung","€1.90","free in a rented hanbok"],["Bukchon Hanok Village","free","early morning = empty lanes"]],
    intro:"The long opening act. Lose the jet lag in palace courtyards and market alleys, eat like the Netflix episode — and let Enok, who lives here, show you the parts no guide lists.",
    days:[["Wed 21","Land 14:35, AREX in.","Gwangjang crawl: bindaetteok, mayak gimbap, knife-cut noodles."],
@@ -402,7 +403,7 @@ const CHAPTERS = [
    foodcap:"Pancakes and pan-fried everything, Gwangjang Market", foodoff:"off-r",
    next:"→ Air Premia · Seoul → Hong Kong · Mon 26 Oct · 09:05 – 11:55 · ~€98"},
   {id:"ch-hkg", no:"02", key:"HKG", city:"Hong Kong", cjk:"香港", cls:"tc", lang:"zh-HK", phon:"heung-GONG", line:"Two dense days between skyline and roast goose.",
-   img:"hongkong", dates:"26 — 28 Oct", nights:"2", arrive:"By lunch; Iskan lands 19:05", eat:"Kam's Roast Goose, 1★", sleep:"Tsim Sha Tsui · ≈ €60 pp", burn:"≈ €142/day pp",
+   img:"hongkong", dates:"26 — 28 Oct", nights:"2", arrive:"By lunch; Iskan lands 19:05", eat:"Kam's Roast Goose, 1★", sleep:"Tsim Sha Tsui · ≈ €60 pp", burn:"≈ €142/day",
    see:[["Peak Tram + Sky Terrace","€16.40","after 21:00, skip the queue"],["M+ museum","€21","closed Mondays — go Tue 27th"],["Star Ferry","€0.60","the best-value crossing on earth"],["Temple Street market","free","after dark"]],
    intro:"In by lunch, straight into it: Michelin-starred goose for dinner, the Peak after dark when the queues die — and Iskan walks into the hotel by ten.",
    days:[["Mon 26","HK by lunch.","Kam's Roast Goose in Wan Chai, Peak Tram after 21:00 for the night skyline."],
@@ -410,7 +411,7 @@ const CHAPTERS = [
    foodcap:"Roast goose, the Wan Chai way", foodoff:"off-l",
    next:"→ High-speed rail · West Kowloon → Shenzhen Futian · Wed 28 Oct · 14 min · ~€9 · both immigrations cleared indoors"},
   {id:"ch-szx", no:"03", key:"SZX", city:"Shenzhen", cjk:"深圳", cls:"sc", lang:"zh-CN", phon:"shun-JEN", line:"The forty-year miracle — and a factory day for Hush.",
-   img:"shenzhen", dates:"28 — 30 Oct", nights:"2 + a night on rails", arrive:"HSR, 14 min from HK", eat:"Chaoshan beef hotpot", sleep:"Futian · ≈ €33 pp", burn:"≈ €75/day pp",
+   img:"shenzhen", dates:"28 — 30 Oct", nights:"2 + a night on rails", arrive:"HSR, 14 min from HK", eat:"Chaoshan beef hotpot", sleep:"Futian · ≈ €33 pp", burn:"≈ €75/day",
    see:[["Free Sky deck, 541 m","€24","Trip.com, passports"],["Huaqiangbei markets","free","add every good stall on WeChat"],["OCT Loft + Dafen","free","if the factory day runs short"]],
    intro:"Your first China stamp, collected indoors before the train even moves. Two working days here: one up the Ping An tower and across the border-town markets — and one for business. Hush goes factory-hunting on Friday, then the whole crew boards a night train.",
    days:[["Wed 28","Cross, then climb.","Free Sky deck at 541 m — Hong Kong on the horizon. Chaoshan hotpot for dinner."],
@@ -426,14 +427,14 @@ const CHAPTERS = [
    foodcap:"Har gow at a Liwan teahouse", foodoff:"off-l",
    next:"→ D964 night sleeper · Shenzhen North → Chongqing West · Fri 30 Oct · 18:32 – 06:05 · lie-flat berths ~€88–99 · presale opens 16 Oct"},
   {id:"ch-ckg", no:"04", key:"CKG", city:"Chongqing", cjk:"重庆", cls:"sc", lang:"zh-CN", phon:"chawng-CHING", line:"Bridges, fog, and the spiciest food of the trip.",
-   img:"chongqing", dates:"31 Oct — 1 Nov", nights:"1 + a dawn arrival", arrive:"D964 sleeper — wake at 06:05", eat:"Nine-grid hotpot", sleep:"Jiefangbei · ≈ €28 pp", burn:"≈ €65/day pp",
+   img:"chongqing", dates:"31 Oct — 1 Nov", nights:"1 + a dawn arrival", arrive:"D964 sleeper — wake at 06:05", eat:"Nine-grid hotpot", sleep:"Jiefangbei · ≈ €28 pp", burn:"≈ €65/day",
    see:[["Hongya Cave + Liziba + Ciqikou","free","the whole cyberpunk circuit costs nothing"],["Yangtze cable car","€3.80","queue early or late"],["Raffles Exploration Deck","€22.80","or the WFC deck at €15"]],
    intro:"Step off the night train into the cyberpunk mountain city with the longest day of the trip ahead: xiaomian for breakfast, eleven storeys of golden stilt-houses by night, a cable car across the Yangtze between them. Order 'wei la'. Mean it.",
    days:[["Sat 31","The long Saturday.","Bags at the hotel by 07:00, xiaomian breakfast. Ciqikou, the cable car, Hongya from Qiansimen Bridge at blue hour, jiugongge hotpot in expendable clothes. Book panda tickets tonight."]],
    foodcap:"The nine grids, each a different heat", foodoff:"off-r",
    next:"→ High-speed rail · Chongqing → Chengdu · Sun 1 Nov · 1h15 · ~€18 · trains every 15 minutes"},
   {id:"ch-ctu", no:"05", key:"CTU", city:"Chengdu", cjk:"成都", cls:"sc", lang:"zh-CN", phon:"chuhng-DOO", line:"Slow down on purpose. The pandas insist.",
-   img:"chengdu", dates:"1 — 4 Nov", nights:"3", arrive:"HSR, 75 min", eat:"Chen Mapo Tofu, since 1862", sleep:"Chunxi / Taikoo Li · ≈ €31 pp", burn:"≈ €72/day pp",
+   img:"chengdu", dates:"1 — 4 Nov", nights:"3", arrive:"HSR, 75 min", eat:"Chen Mapo Tofu, since 1862", sleep:"Chunxi / Taikoo Li · ≈ €31 pp", burn:"≈ €72/day",
    see:[["Panda Base + shuttle","€10.80","gate at 08:00, real-name tickets"],["Face-changing opera","€28","mid-tier seat, book a day ahead"],["Heming Teahouse","€4","a chair, a lid, an afternoon"],["Wenshu + Jinli","free","evening lanterns"]],
    intro:"Teahouse afternoons, opera at night, and the dish that invented numbing heat at the restaurant that invented it. Be at the panda gate at 08:00 sharp — breakfast ends at 9:30 and then it's fur piles.",
    days:[["Sun 01","Arrive and slow down.","People's Park teahouse, ear-cleaning optional. 20:00: Forbidden City tickets drop."],
@@ -442,7 +443,7 @@ const CHAPTERS = [
    foodcap:"Mapo tofu at the 1862 original", foodoff:"off-l",
    next:"→ High-speed rail · Chengdu → Xi'an · Wed 4 Nov · ~3h through the Qinling tunnels · ~€34"},
   {id:"ch-xiy", no:"06", key:"XIY", city:"Xi'an", cjk:"西安", cls:"sc", lang:"zh-CN", phon:"shee-AHN", line:"Eight thousand warriors and the best street food yet.",
-   img:"xian", dates:"4 — 6 Nov", nights:"2", arrive:"HSR, ~3h", eat:"Muslim Quarter, after dark", sleep:"Bell Tower, in the walls · ≈ €26 pp", burn:"≈ €70/day pp",
+   img:"xian", dates:"4 — 6 Nov", nights:"2", arrive:"HSR, ~3h", eat:"Muslim Quarter, after dark", sleep:"Bell Tower, in the walls · ≈ €26 pp", burn:"≈ €70/day",
    see:[["Terracotta Army","€15.20","passport = ticket, 7-day window"],["City Wall + bike","€12.50","the dusk lap"],["Bell + Drum Towers","€6.30","combo ticket"],["Muslim Quarter","free","it IS the food budget"]],
    intro:"Two thousand years of capital city. The Army is a full day out in Lintong — your passport is literally the ticket — and the reward is roujiamo and belt-wide noodles slapped on the counter that evening.",
    days:[["Wed 04","Arrive hungry.","Muslim Quarter crawl: roujiamo, biangbiang, lamb paomo at Laomijia."],
@@ -450,7 +451,7 @@ const CHAPTERS = [
    foodcap:"Biangbiang noodles, name and all", foodoff:"off-r",
    next:"→ G-train · Xi'an → Beijing · Fri 6 Nov · ~4h30 · ~€66 · the one rail leg that sells out — pre-ordered"},
   {id:"ch-bjs", no:"07", key:"BJS", city:"Beijing", cjk:"北京", cls:"sc", lang:"zh-CN", phon:"bay-JING", line:"The finale: wall, palace, duck. Then home.",
-   img:"beijing", dates:"6 — 9 Nov", nights:"3", arrive:"G-train into Beijing West", eat:"Siji Minfu, before 17:00", sleep:"Dongcheng / hutong court · ≈ €40 pp", burn:"≈ €87/day pp",
+   img:"beijing", dates:"6 — 9 Nov", nights:"3", arrive:"G-train into Beijing West", eat:"Siji Minfu, before 17:00", sleep:"Dongcheng / hutong court · ≈ €40 pp", burn:"≈ €87/day",
    see:[["Forbidden City, low season","€5.10","drops 7 days ahead, 20:00 CN — alarm set"],["Mutianyu, all-in","€24.70","entry + shuttle + cable"],["Jingshan Hill","€1.30","the golden-roof overhead"],["Temple of Heaven","€3.50","morning-exercise hour"]],
    intro:"Three closing nights. The Wall over autumn ridges at Mutianyu with a toboggan down, the palace on its quietest weekend slot, duck carved tableside — and on Monday, a daytime plane home from Daxing.",
    days:[["Fri 06","Arrive, wander.","Qianmen in the evening. Nothing ambitious after a train day."],
@@ -477,8 +478,8 @@ const RUNBOOK = [
 const CAST = [
   ["KSG — Kais","Author of this document. The full run: Berlin → Frankfurt → Seoul on the 20th, every train and border in between, home from Beijing on the 9th."],
   ["SKG — Sully","In from San Francisco for the Seoul week, then all of China with the crew. Books the moment KSG's confirmation lands in the chat. US passport — the one visa to sort, this week (see footnote ¹⁰)."],
-  ["SKN — Iskan","Finnair round-trip FRA ⇄ Hong Kong (cheaper for him): joins in Hong Kong on the 26th at 19:05, does China, flies home from HKG on the 9th at 21:45 — plus his own Beijing → Hong Kong hop around the 8th, ~€120–150."],
-  ["ENOK","Our man in Seoul. Already there — the whole Korea week is his home turf. Doesn't travel; hosts."]
+  ["SKN — Iskan","Finnair round-trip FRA ⇄ Hong Kong: joins in Hong Kong on the 26th at 19:05, does China, flies home from HKG on the 9th at 21:45 — plus his own Beijing → Hong Kong hop around the 8th, ~€120–150."],
+  ["ENK — Enok","Our man in Seoul. Already there — the whole Korea week is his home turf. Doesn't travel; hosts."]
 ];
 const FOOTNOTES = [
   "Everything visa-related assumes German passports: Korea 90 days visa-free (K-ETA exempt through 2026, e-Arrival Card still mandatory), Hong Kong 90 days, mainland China 30 days visa-free through 31 Dec 2026 — valid at the West Kowloon land border. One non-German passport changes all three answers; check before money moves.",
@@ -544,7 +545,7 @@ function refresh(){
   const per = sum + FIXED, m = crew?3:1;
   document.getElementById('t-num').innerHTML = `€${(per*m).toLocaleString('en')}${crew?' <em>×3</em>':''}`;
   document.getElementById('t-note').innerHTML =
-    `Chosen flights €${sum*m} + fixed underneath every combo €${FIXED*m} (D964 night sleeper €${88*m} · China rail &amp; border €${147*m} · ICE both ways €${75*m}). Floor ≈ €1,150 · ceiling ≈ €1,698. This is KSG's transport — SKG and SKN book their own long-hauls; the shared legs (hop ×2, China internals ×3) are linked above. The full ledger below adds hotels, food and tickets: ≈ €1,550–1,925 on the ground → ≈ €3,080–3,450 all-in.`;
+    `Chosen flights €${sum*m} + fixed underneath every combo €${FIXED*m} (D964 night sleeper €${88*m} · China rail &amp; border €${147*m} · ICE both ways €${75*m}). Floor ≈ €1,150 · ceiling ≈ €1,698. This is KSG's transport — SKG and SKN book their own long-hauls; the shared legs (hop ×2, China internals ×3) are linked above. The full ledger below adds hotels, food and tickets: ≈ €1,550–1,925 on the ground → ≈ €3,080–3,450 all-in for KSG.`;
 }
 document.getElementById('pp').onclick = e=>{crew=false;e.target.classList.add('on');document.getElementById('p4').classList.remove('on');refresh();};
 document.getElementById('p4').onclick = e=>{crew=true;e.target.classList.add('on');document.getElementById('pp').classList.remove('on');refresh();};
