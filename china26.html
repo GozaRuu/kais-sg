@@ -111,13 +111,18 @@ nav .row .kr,nav .row .sc,nav .row .tc{font-size:11px;margin-right:2px}
 .opt.sel .nm{color:var(--ink)} .opt.sel .pr{color:var(--accent)}
 .bookrow{font-family:var(--mono);font-size:11.5px;padding:10px 0 0;color:var(--ink2)}
 .bookrow a{margin-right:14px}
-.totalrow{display:flex;align-items:baseline;gap:18px;border-top:1px solid var(--ink);margin-top:34px;padding-top:16px;flex-wrap:wrap}
-.totalrow .lbl{font-family:var(--sans);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink2)}
-.totalrow .val{font-family:var(--serif);font-size:44px;line-height:1}
-.totalrow .val em{font-style:normal;color:var(--accent)}
-.totalrow .paxsw{margin-left:auto;font-family:var(--mono);font-size:11.5px}
-.totalrow .paxsw button{background:none;border:none;font-family:var(--mono);font-size:11.5px;color:var(--ink2);cursor:pointer;padding:0 4px;border-bottom:1px solid transparent}
-.totalrow .paxsw button.on{color:var(--ink);border-color:var(--ink)}
+.rc-head{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;border-top:1px solid var(--ink);margin-top:34px;padding-top:16px;margin-bottom:4px}
+.rc-head .lbl{font-family:var(--sans);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink2)}
+.paxsw{display:inline-flex;border:1px solid var(--line)}
+.paxsw button{background:none;border:none;font-family:var(--mono);font-size:11.5px;color:var(--ink2);cursor:pointer;padding:7px 13px}
+.paxsw button.on{background:var(--ink);color:var(--paper)}
+.rc-row{display:grid;grid-template-columns:1fr auto;gap:14px;padding:9px 0;border-bottom:1px solid var(--line);font-size:14.5px;align-items:baseline}
+.rc-row .d{font-family:var(--sans);font-size:11px;color:var(--ink2)}
+.rc-row .m{font-family:var(--mono);font-size:12.5px;text-align:right}
+.rc-total{display:flex;justify-content:space-between;align-items:baseline;gap:14px;border-top:1px solid var(--ink);margin-top:-1px;padding-top:14px}
+.rc-total .lbl{font-family:var(--sans);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink2)}
+.rc-total .val{font-family:var(--serif);font-size:clamp(30px,6vw,44px);line-height:1;white-space:nowrap}
+.rc-total .val em{font-style:normal;color:var(--accent)}
 .totalnote{font-family:var(--sans);font-size:11px;color:var(--ink2);margin-top:10px;line-height:1.7}
 
 /* chapters */
@@ -263,11 +268,12 @@ footer .cr{font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;text-tr
 <div class="plate" id="plate-flights">
   <div class="plate-label"><b>Plate II</b> — The three flights that matter · pick a line in each block, the total follows · all fares seen live 22 Aug 2026</div>
   <div id="fl-blocks"></div>
-  <div class="totalrow">
-    <span class="lbl">Transport, your picks</span>
-    <span class="val" id="t-num">€1,520</span>
-    <span class="paxsw"><button id="pp" class="on">KSG solo</button> / <button id="p4">×3 crew, rough</button></span>
+  <div class="rc-head">
+    <span class="lbl">The bill, your picks</span>
+    <span class="paxsw"><button id="pp" class="on">KSG solo</button><button id="p4">×3 crew</button></span>
   </div>
+  <div id="rc-rows"></div>
+  <div class="rc-total"><span class="lbl">KSG's transport</span><span class="val" id="t-num">€1,528</span></div>
   <div class="totalnote" id="t-note"></div>
 </div>
 
@@ -538,15 +544,22 @@ FLIGHTS.forEach(F=>{
   });
 });
 function refresh(){
-  let sum = 0;
+  let sum = 0; const rows = [];
   FLIGHTS.forEach(F=>{
     const o = F.opts.find(x=>x.id===sel[F.key]); sum += o.eur;
+    rows.push([F.route, o.nm.split(',')[0], o.eur]);
     F.opts.forEach(x=>document.getElementById(`o-${F.key}-${x.id}`).classList.toggle('sel', x.id===sel[F.key]));
   });
+  rows.push(['D964 night sleeper', 'Shenzhen → Chongqing, a berth', 88]);
+  rows.push(['China rail & border', 'all the daytime legs', 147]);
+  rows.push(['ICE ×2', 'Berlin ⇄ Frankfurt', 75]);
+  document.getElementById('rc-rows').innerHTML = rows.map(r=>
+    `<div class="rc-row"><span>${r[0]} <span class="d">· ${r[1]}</span></span><span class="m">€${r[2]}</span></div>`).join('');
   const per = sum + FIXED, m = crew?3:1;
   document.getElementById('t-num').innerHTML = `€${(per*m).toLocaleString('en')}${crew?' <em>×3</em>':''}`;
-  document.getElementById('t-note').innerHTML =
-    `Chosen flights €${sum*m} + fixed underneath every combo €${FIXED*m} (D964 night sleeper €${88*m} · China rail &amp; border €${147*m} · ICE both ways €${75*m}). Floor ≈ €1,150 · ceiling ≈ €1,698. This is KSG's transport — SKG and SKN book their own long-hauls; the shared legs (hop ×2, China internals ×3) are linked above. The full ledger below adds hotels, food and tickets: ≈ €1,550–1,925 on the ground → ≈ €3,080–3,450 all-in for KSG.`;
+  document.getElementById('t-note').innerHTML = crew
+    ? `Rows stay per seat; the total is ×3 — rough on purpose, since SKG and SKN book their own long-hauls.`
+    : `Floor ≈ €1,150, ceiling ≈ €1,698 across all combos. SKG and SKN book their own long-hauls; the shared legs are linked above. The ledger below adds the ground: ≈ €3,080–3,450 all-in for KSG.`;
 }
 document.getElementById('pp').onclick = e=>{crew=false;e.target.classList.add('on');document.getElementById('p4').classList.remove('on');refresh();};
 document.getElementById('p4').onclick = e=>{crew=true;e.target.classList.add('on');document.getElementById('pp').classList.remove('on');refresh();};
