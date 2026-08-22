@@ -169,10 +169,23 @@
       z-index: 3;
     }
 
-    .stack .ja {
+    .ja {
       font-style: normal;
       font-family: "Hiragino Mincho ProN", "Yu Mincho", "Noto Serif JP", serif;
     }
+
+    /* mettā echoes under the last BERLIN */
+    .metta {
+      position: absolute;
+      right: 3%;
+      top: 77%;
+      text-align: right;
+      font-size: min(0.7rem, 1.8svh);
+      letter-spacing: 0.08em;
+      line-height: 1.6;
+    }
+
+    .metta span { display: block; opacity: var(--o); }
 
     .visually-hidden {
       position: absolute;
@@ -198,6 +211,11 @@
       <div class="row"><span>KSG</span><span>BERLIN;</span></div>
       <div class="row"><span>KSG;</span><span></span></div>
       <div class="row"><span>KSG</span><span></span></div>
+      <div class="metta">
+        <span style="--o:1">METTĀ</span>
+        <span style="--o:.55">METTĀ</span>
+        <span style="--o:.25">METTĀ</span>
+      </div>
       <img class="photo" src="/first-one-there.jpeg" alt="">
     </div>
 
@@ -231,7 +249,7 @@
     </div>
   </main>
 
-  <footer>LET GO / METTĀ</footer>
+  <footer>LET GO / <i class="ja" lang="ja">捨</i></footer>
 
 </body>
 </html>
