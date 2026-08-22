@@ -121,12 +121,22 @@
       position: relative;
     }
 
-    /* pinned to the viewport so it hugs the real right edge */
+    /* pinned to the viewport so it hugs the real right edge; hillside + stripe */
     .photo2 {
       position: fixed;
-      right: 2vw;
-      top: 58svh;
-      width: min(38vw, 56svh);
+      right: 1vw;
+      top: 40svh;
+      width: min(max(20vw, 9rem), 38svh);
+      z-index: 2;
+      display: block;
+    }
+
+    /* the yellow part, flipped horizontal, small, off in the left margin */
+    .photo3 {
+      position: fixed;
+      left: 3vw;
+      top: 66svh;
+      width: min(max(12vw, 7rem), 26svh);
       z-index: 2;
       display: block;
     }
@@ -217,6 +227,7 @@
       </div>
 
       <img class="photo2" src="/second-one-ever.jpeg" alt="">
+      <img class="photo3" src="/second-one-ever-flip.jpeg" alt="">
     </div>
   </main>
 
