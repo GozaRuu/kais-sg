@@ -4,18 +4,18 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Kais — just some dude in Berlin</title>
-  <meta name="description" content="Kais, aka KSG, aka GozaRuu, aka KStotheG. Just some dude in Berlin.">
+  <title>KSG — just some dude in Berlin</title>
+  <meta name="description" content="KSG, aka Kais, aka GozaRuu. Just some dude in Berlin.">
   <link rel="canonical" href="https://kais-sg.com/">
 
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://kais-sg.com/">
-  <meta property="og:title" content="Kais — just some dude in Berlin">
-  <meta property="og:description" content="aka KSG · aka GozaRuu · aka KStotheG. 捨 / upekkhā — equanimity.">
+  <meta property="og:title" content="KSG — just some dude in Berlin">
+  <meta property="og:description" content="aka Kais · aka GozaRuu. 捨 / upekkhā — equanimity.">
   <meta property="og:site_name" content="kais-sg.com">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Kais — just some dude in Berlin">
-  <meta name="twitter:description" content="aka KSG · aka GozaRuu · aka KStotheG. 捨 / upekkhā — equanimity.">
+  <meta name="twitter:title" content="KSG — just some dude in Berlin">
+  <meta name="twitter:description" content="aka Kais · aka GozaRuu. 捨 / upekkhā — equanimity.">
 
   <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23FAF9F5%22%2F%3E%3Ctext%20x%3D%2250%22%20y%3D%2272%22%20font-size%3D%2270%22%20text-anchor%3D%22middle%22%20fill%3D%22%231B1917%22%20font-family%3D%22serif%22%3E%E6%8D%A8%3C%2Ftext%3E%3C%2Fsvg%3E">
 
@@ -24,7 +24,7 @@
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Kais",
-    "alternateName": ["KSG", "GozaRuu", "KStotheG"],
+    "alternateName": ["KSG", "GozaRuu"],
     "url": "https://kais-sg.com/",
     "homeLocation": { "@type": "City", "name": "Berlin" },
     "sameAs": ["https://github.com/GozaRuu"]
@@ -33,7 +33,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@500&display=swap" rel="stylesheet">
 
   <style>
     :root {
@@ -48,33 +48,34 @@
     body {
       background: var(--paper);
       color: var(--ink);
-      font-family: "DM Serif Display", "Times New Roman", Times, serif;
-      font-weight: 400;
+      font-family: "Archivo", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-weight: 500;
       -webkit-font-smoothing: antialiased;
     }
 
     .poster {
-      max-width: 46rem;
-      margin: 0 auto;
-      padding: 4vh 5vw 0;
+      position: relative;
+      padding: 4vh 3vw 0;
     }
 
     .row {
       display: flex;
       justify-content: space-between;
       align-items: baseline;
-      font-size: clamp(1.15rem, 3.4vw, 2.1rem);
-      line-height: 1.12;
-      letter-spacing: 0.005em;
+      font-family: "Archivo Black", "Arial Black", "Helvetica Neue", sans-serif;
+      font-weight: 400;
+      font-size: clamp(1.4rem, 4.2vw, 2.7rem);
+      line-height: 1.18;
+      letter-spacing: 0.01em;
     }
 
     /* ragged offsets, one per row */
-    .row:nth-of-type(1) { padding-left: 2%;  padding-right: 3%; }
-    .row:nth-of-type(2) { padding-left: 0;   padding-right: 7%; }
-    .row:nth-of-type(3) { padding-left: 3%;  padding-right: 1%; }
-    .row:nth-of-type(4) { padding-left: 1%;  padding-right: 5%; }
-    .row:nth-of-type(5) { padding-left: 4%;  padding-right: 0; }
-    .row:nth-of-type(6) { padding-left: 0;   padding-right: 4%; }
+    .row:nth-of-type(1) { padding-left: 3%;  padding-right: 2%; }
+    .row:nth-of-type(2) { padding-left: 0;   padding-right: 6%; }
+    .row:nth-of-type(3) { padding-left: 4%;  padding-right: 0; }
+    .row:nth-of-type(4) { padding-left: 1%;  padding-right: 4%; }
+    .row:nth-of-type(5) { padding-left: 5%;  padding-right: 1%; }
+    .row:nth-of-type(6) { padding-left: 0;   padding-right: 3%; }
 
     .whichone {
       margin-top: 12vh;
@@ -82,34 +83,33 @@
       justify-content: space-between;
     }
 
-    .dude {
-      margin-top: 9vh;
-      margin-left: 56%;
-      font-size: 0.72rem;
-      letter-spacing: 0.06em;
-      opacity: 0.45;
-      white-space: nowrap;
-    }
-
     .stack {
-      font-size: 0.72rem;
-      line-height: 1.55;
-      letter-spacing: 0.06em;
+      font-size: 0.7rem;
+      line-height: 1.6;
+      letter-spacing: 0.08em;
       white-space: nowrap;
     }
 
     .stack span { display: block; opacity: var(--o); }
 
     .stack .ja {
+      font-style: normal;
       font-family: "Hiragino Mincho ProN", "Yu Mincho", "Noto Serif JP", serif;
     }
 
+    .dude {
+      margin-top: 9vh;
+      margin-left: 56%;
+      font-size: 0.7rem;
+      letter-spacing: 0.08em;
+      opacity: 0.45;
+      white-space: nowrap;
+    }
+
     footer {
-      max-width: 46rem;
-      margin: 0 auto;
-      padding: 14vh 5vw 2rem;
-      font-size: 0.72rem;
-      letter-spacing: 0.06em;
+      padding: 12vh 3vw 2rem;
+      font-size: 0.7rem;
+      letter-spacing: 0.08em;
     }
 
     footer a { color: inherit; }
@@ -125,15 +125,15 @@
 </head>
 <body>
 
-  <h1 class="visually-hidden">Kais — aka KSG, aka GozaRuu, aka KStotheG — just some dude in Berlin. 捨, upekkhā, equanimity.</h1>
+  <h1 class="visually-hidden">KSG — Kais, aka GozaRuu — just some dude in Berlin. 捨, upekkhā, equanimity.</h1>
 
   <main class="poster" aria-hidden="true">
-    <div class="row"><span>KAIS</span><span>KSG</span></div>
-    <div class="row"><span>KAIS</span><span>GOZARUU</span></div>
-    <div class="row"><span>KAIS</span><span>KStotheG</span></div>
-    <div class="row"><span>KAIS</span><span>KSG</span></div>
-    <div class="row"><span>KAIS</span><span>GOZARUU</span></div>
-    <div class="row"><span>KAIS</span><span>KStotheG</span></div>
+    <div class="row"><span>KSG</span><span>GOZARUU</span></div>
+    <div class="row"><span>KSG</span><span>KAIS</span></div>
+    <div class="row"><span>KSG</span><span>GOZARUU</span></div>
+    <div class="row"><span>KSG</span><span>GOZARUU</span></div>
+    <div class="row"><span>KSG</span><span>KAIS</span></div>
+    <div class="row"><span>KSG</span><span>GOZARUU</span></div>
 
     <div class="whichone">
       <div class="stack" lang="ja">
