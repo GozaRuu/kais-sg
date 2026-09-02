@@ -6,6 +6,12 @@
 /china26
   X-Robots-Tag: noindex, nofollow
 
+/tally
+  X-Robots-Tag: noindex, nofollow
+
+/tally.html
+  X-Robots-Tag: noindex, nofollow
+
 /china26.html
   X-Robots-Tag: noindex, nofollow
 

@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>The Tally — Good Men in the East</title>
+<meta property="og:title" content="The Tally">
+<meta property="og:description" content="Who paid what · Good Men in the East · EUR">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23F7F4EE%22%2F%3E%3Ctext%20x%3D%2250%22%20y%3D%2272%22%20font-size%3D%2270%22%20text-anchor%3D%22middle%22%20fill%3D%22%231A1815%22%20font-family%3D%22serif%22%3E%E8%B4%A6%3C%2Ftext%3E%3C%2Fsvg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500&family=IBM+Plex+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#F7F4EE;--ink:#1A1815;--ink2:#8A8378;--line:#E3DED5;--accent:#B5442E;
+  --serif:'Instrument Serif',Georgia,serif;--sans:'Archivo',-apple-system,sans-serif;--mono:'IBM Plex Mono',ui-monospace,monospace}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.6}
+.col{max-width:640px;margin:0 auto;padding:0 20px}
+header{padding:60px 0 40px;text-align:center}
+h1{font-family:var(--serif);font-weight:400;font-size:clamp(44px,9vw,64px);line-height:1}
+.sub{font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;color:var(--ink2);margin-top:12px}
+.eyebrow{font-family:var(--sans);font-size:10.5px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--ink2);
+  border-bottom:1px solid var(--ink);padding-bottom:7px;margin:44px 0 4px}
+.row{display:grid;grid-template-columns:64px 1fr auto auto;gap:12px;align-items:baseline;padding:11px 0;border-bottom:1px solid var(--line)}
+.row .dt{font-family:var(--mono);font-size:11px;color:var(--ink2);white-space:nowrap}
+.row .what{font-size:14.5px}
+.row .what small{display:block;font-size:11px;color:var(--ink2)}
+.row .who{font-family:var(--mono);font-size:11.5px;color:var(--accent);white-space:nowrap}
+.row .amt{font-family:var(--mono);font-size:13px;text-align:right;white-space:nowrap}
+.row .amt.pending{color:var(--ink2);font-style:italic}
+.bal{display:grid;grid-template-columns:1fr auto auto auto;gap:12px;align-items:baseline;padding:11px 0;border-bottom:1px solid var(--line)}
+.bal .nm{font-size:14.5px}
+.bal .m{font-family:var(--mono);font-size:12.5px;text-align:right}
+.bal .m.pos{color:#3d6b35}
+.bal .m.neg{color:var(--accent)}
+.bal-head{display:grid;grid-template-columns:1fr auto auto auto;gap:12px;font-family:var(--sans);font-size:9.5px;font-weight:500;
+  letter-spacing:.14em;text-transform:uppercase;color:var(--ink2);padding-bottom:6px}
+.settle{margin-top:8px}
+.settle .s{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:13px 0;border-bottom:1px solid var(--line);font-size:15px}
+.settle .s .m{font-family:var(--mono);font-size:14px;color:var(--accent)}
+.note{font-size:11.5px;color:var(--ink2);margin-top:14px;line-height:1.7}
+.total{display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid var(--ink);margin-top:-1px;padding-top:14px}
+.total .lbl{font-family:var(--sans);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink2)}
+.total .val{font-family:var(--serif);font-size:38px;line-height:1}
+footer{padding:70px 20px 50px;text-align:center;font-family:var(--mono);font-size:11px;letter-spacing:.08em;color:var(--ink2)}
+footer a{color:var(--accent);text-decoration:none}
+</style>
+</head>
+<body>
+
+<header class="col">
+  <h1>The Tally</h1>
+  <div class="sub">GOOD MEN IN THE EAST · SHARED COSTS · EUR · SPLIT ×3</div>
+</header>
+
+<main class="col">
+  <div class="eyebrow">Entries</div>
+  <div id="rows"></div>
+  <div class="total"><span class="lbl">Shared pot so far</span><span class="val" id="pot">€0</span></div>
+
+  <div class="eyebrow">Balances</div>
+  <div class="bal-head"><span></span><span>paid</span><span>share</span><span>net</span></div>
+  <div id="bals"></div>
+
+  <div class="eyebrow">To settle</div>
+  <div class="settle" id="settle"></div>
+  <div class="note" id="note"></div>
+</main>
+
+<footer>kept in git · updated by the concierge · <a href="/china26">the field guide</a></footer>
+
+<script>
+const CREW = { KSG:'Kais', SKG:'Sully', SKN:'Iskan' };
+
+/* one line per payment. eur:null = booked, amount pending. split defaults to all three. */
+const ENTRIES = [
+  { d:'02 Sep', what:'Hotel', detail:'booked by KSG · city + amount pending', by:'KSG', eur:null },
+  { d:'02 Sep', what:'Hotel', detail:'booked by SKN · city + amount pending', by:'SKN', eur:null },
+  { d:'02 Sep', what:'Hotel', detail:'booked by SKN · city + amount pending', by:'SKN', eur:null },
+];
+
+const fmt = n => '€' + n.toLocaleString('en', {maximumFractionDigits: 0});
+const live = ENTRIES.filter(e => e.eur != null);
+const pending = ENTRIES.length - live.length;
+
+document.getElementById('rows').innerHTML = ENTRIES.map(e =>
+  `<div class="row"><span class="dt">${e.d}</span>
+     <span class="what">${e.what}<small>${e.detail||''}</small></span>
+     <span class="who">${e.by}</span>
+     <span class="amt ${e.eur==null?'pending':''}">${e.eur==null?'pending':fmt(e.eur)}</span></div>`).join('');
+
+const pot = live.reduce((s,e)=>s+e.eur, 0);
+document.getElementById('pot').textContent = fmt(pot);
+
+const paid = {}, share = {};
+Object.keys(CREW).forEach(k => { paid[k]=0; share[k]=0; });
+live.forEach(e => {
+  const split = e.split || Object.keys(CREW);
+  paid[e.by] += e.eur;
+  split.forEach(k => share[k] += e.eur / split.length);
+});
+
+document.getElementById('bals').innerHTML = Object.keys(CREW).map(k => {
+  const net = paid[k] - share[k];
+  return `<div class="bal"><span class="nm">${CREW[k]} <span style="color:var(--ink2);font-family:var(--mono);font-size:11px">${k}</span></span>
+    <span class="m">${fmt(paid[k])}</span><span class="m">${fmt(share[k])}</span>
+    <span class="m ${net>1?'pos':net<-1?'neg':''}">${net>0?'+':''}${fmt(net)}</span></div>`;
+}).join('');
+
+/* minimal transfers */
+const owe = Object.keys(CREW).map(k => ({k, n: paid[k]-share[k]})).sort((a,b)=>a.n-b.n);
+const moves = [];
+let i = 0, j = owe.length - 1;
+while (i < j) {
+  const amt = Math.min(-owe[i].n, owe[j].n);
+  if (amt > 1) { moves.push([owe[i].k, owe[j].k, amt]); owe[i].n += amt; owe[j].n -= amt; }
+  if (owe[i].n > -1) i++;
+  if (owe[j].n < 1) j--;
+}
+document.getElementById('settle').innerHTML = moves.length
+  ? moves.map(([a,b,m]) => `<div class="s"><span>${CREW[a]} pays ${CREW[b]}</span><span class="m">${fmt(m)}</span></div>`).join('')
+  : '<div class="s"><span>All square</span><span class="m">—</span></div>';
+
+document.getElementById('note').textContent = pending
+  ? `${pending} entr${pending===1?'y':'ies'} awaiting amounts — not counted in balances yet. Ping the concierge with what and how much.`
+  : 'Everything counted. Ping the concierge to add a payment.';
+</script>
+</body>
+</html>
