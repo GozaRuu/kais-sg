@@ -41,7 +41,7 @@ nav a{color:var(--ink2);border-bottom:1px solid transparent;padding-bottom:2px}
 nav a:hover,nav a.cur{color:var(--ink);border-color:var(--ink)}
 
 /* cover */
-.cover{min-height:88vh;display:flex;flex-direction:column;justify-content:center;text-align:center;padding:90px 24px 60px}
+.cover{min-height:60vh;display:flex;flex-direction:column;justify-content:center;text-align:center;padding:56px 24px 40px}
 .cover .eyebrow{margin-bottom:34px}
 .cover h1{font-family:var(--serif);font-weight:400;font-size:clamp(56px,10vw,124px);line-height:.98;letter-spacing:-.01em}
 .cover h1 em{font-style:italic}
@@ -59,18 +59,18 @@ nav .row .kr,nav .row .sc,nav .row .tc{font-size:11px;margin-right:2px}
 .say:hover{border-color:var(--accent)}
 .phon{font-family:var(--sans);font-size:11px;letter-spacing:.08em;color:var(--ink2);margin-left:8px;vertical-align:3px}
 .dv-mark{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;z-index:-1;
-  font-size:clamp(170px,26vw,380px);font-weight:600;color:var(--ink);opacity:.05;line-height:1;
+  font-size:clamp(110px,16vw,220px);font-weight:600;color:var(--ink);opacity:.05;line-height:1;
   pointer-events:none;user-select:none;white-space:nowrap}
 .no .cjkn{font-size:27px;font-weight:600;color:var(--ink);margin-left:12px;letter-spacing:.08em}
 .plate-label .cjkp{color:var(--ink);letter-spacing:.12em;margin-left:6px}
 .cover .tag{font-family:var(--text);font-style:italic;font-size:clamp(18px,2.4vw,23px);color:var(--ink2);margin-top:26px}
-.cover .rule{width:56px;height:1px;background:var(--ink);margin:44px auto}
+.cover .rule{width:56px;height:1px;background:var(--ink);margin:28px auto}
 .cover .facts{font-family:var(--mono);font-size:12.5px;color:var(--ink);display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
 .cover .facts span{color:var(--ink2)}
-.route-line{font-family:var(--mono);font-size:11.5px;color:var(--ink2);margin-top:56px;letter-spacing:.04em;line-height:2}
+.route-line{font-family:var(--mono);font-size:11.5px;color:var(--ink2);margin-top:34px;letter-spacing:.04em;line-height:2}
 
 /* plates */
-.plate{border:1px solid var(--line);margin:110px auto;max-width:980px;padding:34px 34px 30px;position:relative;background:var(--paper)}
+.plate{border:1px solid var(--line);margin:54px auto;max-width:980px;padding:30px 34px 28px;position:relative;background:var(--paper)}
 .plate-label{font-family:var(--sans);font-size:10.5px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--ink2);margin-bottom:26px}
 .plate-label b{color:var(--ink);font-weight:500}
 
@@ -126,10 +126,10 @@ nav .row .kr,nav .row .sc,nav .row .tc{font-size:11px;margin-right:2px}
 .totalnote{font-family:var(--sans);font-size:11px;color:var(--ink2);margin-top:10px;line-height:1.7}
 
 /* chapters */
-.divider{min-height:74vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:60px 24px;position:relative;overflow:hidden}
+.divider{min-height:30vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:48px 24px 34px;position:relative;overflow:hidden}
 .divider .no{font-family:var(--serif);font-size:26px;color:var(--accent)}
-.divider .vr{width:1px;height:44px;background:var(--line);margin:22px 0}
-.divider h2{font-family:var(--serif);font-weight:400;font-size:clamp(52px,8.5vw,104px);line-height:.98}
+.divider .vr{width:1px;height:26px;background:var(--line);margin:14px 0}
+.divider h2{font-family:var(--serif);font-weight:400;font-size:clamp(38px,6vw,72px);line-height:.98}
 .divider .sub{font-style:italic;font-size:19px;color:var(--ink2);margin-top:18px}
 .hero{max-width:980px;margin:0 auto;padding:0 24px}
 .hero img{width:100%;aspect-ratio:16/10;object-fit:cover;filter:saturate(.92)}
@@ -149,18 +149,18 @@ nav .row .kr,nav .row .sc,nav .row .tc{font-size:11px;margin-right:2px}
 .carousel .cap{margin-top:7px;min-height:17px}
 .cap{font-family:var(--sans);font-size:11px;color:var(--ink2);margin-top:8px;line-height:1.6}
 .cap b{font-weight:500;color:var(--ink)}
-.intro{margin:64px auto 0;font-size:18.5px;line-height:1.7}
-.facts{max-width:620px;margin:44px auto 0;padding:14px 24px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);display:flex;gap:8px 34px;flex-wrap:wrap}
+.intro{margin:30px auto 0;font-size:17.5px;line-height:1.65}
+.facts{max-width:620px;margin:26px auto 0;padding:14px 24px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);display:flex;gap:8px 34px;flex-wrap:wrap}
 .facts>div{min-width:100px}
 .facts .k{font-family:var(--sans);font-size:9.5px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--ink2)}
 .facts .v{font-family:var(--mono);font-size:12.5px;margin-top:3px}
-.days{margin:54px auto 0}
+.days{margin:30px auto 0}
 .day{display:grid;grid-template-columns:110px 1fr;gap:18px;padding:12px 0;border-bottom:1px solid var(--line)}
 .day:last-child{border-bottom:none}
 .day .dt{font-family:var(--mono);font-size:12px;color:var(--accent);padding-top:3px;white-space:nowrap}
 .day .tx{font-size:16.5px;line-height:1.55}
 .day .tx small{display:block;font-family:var(--sans);font-size:11.5px;color:var(--ink2);margin-top:2px}
-.seewrap{margin-top:44px}
+.seewrap{margin-top:28px}
 .seehead{font-family:var(--sans);font-size:10px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--ink2);
   border-bottom:1px solid var(--ink);padding-bottom:6px}
 .see{display:flex;align-items:baseline;gap:14px;padding:10px 0;border-bottom:1px solid var(--line);font-size:15px}
@@ -179,11 +179,11 @@ nav .row .kr,nav .row .sc,nav .row .tc{font-size:11px;margin-right:2px}
 .lg-total .big{font-family:var(--serif);font-size:40px;line-height:1}
 .lg-note{font-family:var(--sans);font-size:11px;color:var(--ink2);margin-top:12px;line-height:1.75}
 @media(max-width:760px){.lg-head{display:none}.lg-row{grid-template-columns:1fr .6fr;grid-auto-flow:dense}.lg-row .d{grid-column:1/-1}}
-.foodimg{max-width:620px;margin:64px auto 0;padding:0 24px}
+.foodimg{max-width:620px;margin:34px auto 0;padding:0 24px}
 .foodimg img{width:100%;aspect-ratio:3/2;object-fit:cover;filter:saturate(.92)}
 .foodimg.off-r{transform:translateX(4%)}
 .foodimg.off-l{transform:translateX(-4%)}
-.transit{margin:120px auto;text-align:center;font-family:var(--mono);font-size:12px;color:var(--ink2);letter-spacing:.05em}
+.transit{margin:50px auto;text-align:center;font-family:var(--mono);font-size:12px;color:var(--ink2);letter-spacing:.05em}
 .transit b{color:var(--ink);font-weight:500}
 
 /* runbook + footnotes */
@@ -198,16 +198,16 @@ nav .row .kr,nav .row .sc,nav .row .tc{font-size:11px;margin-right:2px}
 .fnote p{font-size:13px;color:#43403a;line-height:1.75;margin-bottom:12px}
 .fnote sup{color:var(--accent);font-family:var(--mono);font-size:10px;margin-right:6px}
 .cast .rb-row .w{color:var(--ink)}
-details{max-width:980px;margin:60px auto 0;padding:0 24px}
+details{max-width:980px;margin:36px auto 0;padding:0 24px}
 summary{font-family:var(--sans);font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink2);cursor:pointer}
 details ul{margin:16px 0 0 18px;font-family:var(--sans);font-size:12px;color:var(--ink2);line-height:2}
-footer{padding:110px 24px 90px;text-align:center}
+footer{padding:60px 24px 48px;text-align:center}
 footer .fin{font-family:var(--serif);font-size:38px;font-style:italic}
 footer .cr{font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink2);margin-top:16px;line-height:2.1}
 
 @media(max-width:900px){
   .globe-grid{grid-template-columns:minmax(0,1fr)}
-  .plate{padding:24px 18px;margin:70px 12px}
+  .plate{padding:22px 16px;margin:38px 12px}
   .day{grid-template-columns:86px 1fr}
   .rb-row{grid-template-columns:1fr}
   .rb-row .w{padding-top:0}
@@ -238,7 +238,7 @@ footer .cr{font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;text-tr
   <div class="rule"></div>
   <div class="cjk-tag"><span class="sc">东行记</span> · <span class="kr">동쪽으로</span></div>
   <div class="facts">
-    <div>23 days</div><span>·</span><div>8 cities</div><span>·</span><div>1 night train</div><span>·</span><div>€3.1–3.5k all-in</div>
+    <div>23 days</div><span>·</span><div>8 cities</div><span>·</span><div>1 night train</div><span>·</span><div>€2.9–3.2k all-in</div>
   </div>
   <div class="route-line">Berlin → Frankfurt → Seoul → Hong Kong → Shenzhen → Guangzhou → Chongqing → Chengdu → Xi'an → Beijing → Frankfurt → Berlin</div>
 </section>
@@ -291,11 +291,11 @@ footer .cr{font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;text-tr
   <div id="lg-rows"></div>
   <div class="lg-total">
     <div><div class="lbl">Korea, on the ground</div><div class="big">€540–670</div></div>
-    <div><div class="lbl">China, on the ground</div><div class="big">€1,010–1,260</div></div>
+    <div><div class="lbl">China, on the ground</div><div class="big">€900–1,085</div></div>
     <div><div class="lbl">+ KSG's transport</div><div class="big">€1,490</div></div>
-    <div><div class="lbl">All-in, KSG</div><div class="big" style="color:var(--accent)">€3,040–3,415</div></div>
+    <div><div class="lbl">All-in, KSG</div><div class="big" style="color:var(--accent)">€2,930–3,245</div></div>
   </div>
-  <div class="lg-note">Hotels €800 + food €695 + tickets €300 + local transport €120 ≈ €93/day is the comfortable ceiling; twin-share budget hotels, street-food-heavy days and skipping a paid deck or two run nearer €74/day — €1,550 for the 21 days. The tier cliff is real: a restaurant beer is €6.30 in Hong Kong, €3.10 in Seoul, ~€1.20 everywhere in the mainland — plan the big nights west of the border. Booking order: Seoul first (late-Oct foliage peak), then Shenzhen (Canton-Fair spillover), then HK; the four inland cities are shoulder-season and can wait, booked refundable. All mainland hotels via Trip.com's English site — it only surfaces foreigner-accepting houses, and every guest is passport-registered, so book 3 named guests.</div>
+  <div class="lg-note">Hotels €800 + food €695 + tickets €300 + local transport €120 ≈ €93/day is the comfortable ceiling; twin-share budget hotels, street-food-heavy days and skipping a paid deck or two run nearer €74/day — €1,550 for the 21 days. The tier cliff is real: a restaurant beer is €6.30 in Hong Kong, €3.10 in Seoul, ~€1.20 everywhere in the mainland — plan the big nights west of the border. HK, Shenzhen and Guangzhou are booked — the ✓ rows are real receipts, and shared apartments ×3 beat every estimate. Left, refundable: Seoul first (late-Oct foliage peak), then Chongqing, Chengdu, Xi'an, Beijing. All mainland hotels via Trip.com's English site — it only surfaces foreigner-accepting houses, and every guest is passport-registered, so book 3 named guests.</div>
 </div>
 
 <div id="chapters"></div>
@@ -310,7 +310,7 @@ footer .cr{font-family:var(--sans);font-size:10.5px;letter-spacing:.16em;text-tr
   <div id="cast-rows"></div>
 </div>
 
-<section style="margin:120px 0 0">
+<section style="margin:56px 0 0">
   <div class="fnote" id="fnotes">
     <div class="hr"></div>
   </div>
@@ -351,7 +351,7 @@ const LEGS = [
   {id:"hop", from:"SEL", to:"HKG", mode:"fly"},
   {id:"border", from:"HKG", to:"SZX", mode:"rail"},
   {id:"gz", from:"SZX", to:"GZ", mode:"rail"},
-  {id:"szckg", from:"SZX", to:"CKG", mode:"rail"},
+  {id:"gzckg", from:"GZ", to:"CKG", mode:"rail"},
   {id:"cqcd", from:"CKG", to:"CTU", mode:"rail"},
   {id:"cdxa", from:"CTU", to:"XIY", mode:"rail"},
   {id:"xabj", from:"XIY", to:"BJS", mode:"rail"},
@@ -368,13 +368,13 @@ const DAYS = [
   {d:"Sun 25 Oct", city:"SEL", plan:"Slow Han-river Sunday. Clocks change in Europe — recheck times. KBBQ send-off."},
   {d:"Mon 26 Oct", city:"HKG", transit:[["hop",false]], plan:"09:05 flight, HK by lunch. Kam's goose, Peak after 21:00. Iskan lands 19:05."},
   {d:"Tue 27 Oct", city:"HKG", plan:"Dim sum before noon, Star Ferry, Temple Street at night."},
-  {d:"Wed 28 Oct", city:"SZX", transit:[["border",false]], plan:"14 minutes to Futian, immigration done indoors. Free Sky, then Chaoshan hotpot."},
-  {d:"Thu 29 Oct", city:"GZ", transit:[["gz",false],["gz",true]], plan:"Guangzhou raid: Taotaoju morning tea, Canton Tower at dusk, last train back."},
-  {d:"Fri 30 Oct", city:"CKG", transit:[["szckg",false]], plan:"The Hush day: factories till 16:30, then the D964 night sleeper, 18:32 from Shenzhen North."},
-  {d:"Sat 31 Oct", city:"CKG", plan:"Wake in Chongqing at 06:05. Xiaomian breakfast, Ciqikou, cable car, Hongya at blue hour, hotpot. Book pandas."},
-  {d:"Sun 01 Nov", city:"CTU", transit:[["cqcd",false]], plan:"75 minutes to Chengdu. Teahouse afternoon. 20:00 — Forbidden City tickets."},
-  {d:"Mon 02 Nov", city:"CTU", plan:"At the panda gate for 08:00. They eat till 9:30, then it's naps."},
-  {d:"Tue 03 Nov", city:"CTU", plan:"Wenshu, Jinli, face-changing opera at night."},
+  {d:"Wed 28 Oct", city:"SZX", transit:[["border",false]], plan:"Cross at Futian by 10:00. Huaqiangbei or the Hush factory visit, Free Sky at dusk, Chaoshan hotpot."},
+  {d:"Thu 29 Oct", city:"GZ", transit:[["gz",false]], plan:"35 minutes to Guangzhou South, check in Haizhu after 14:00. Canton Tower 16:00–18:00."},
+  {d:"Fri 30 Oct", city:"GZ", plan:"The full Guangzhou day: Taotaoju zaocha by 10:00, Chen Clan Hall, Shamian at golden hour."},
+  {d:"Sat 31 Oct", city:"CKG", transit:[["gzckg",false]], plan:"Checkout by noon, slow afternoon, D948 night sleeper from Guangzhou South at 19:01."},
+  {d:"Sun 01 Nov", city:"CKG", plan:"Wake in Chongqing ~06:00. Xiaomian, Ciqikou, cable car, Hongya at blue hour, hotpot. 20:00: Forbidden City tickets. Book pandas."},
+  {d:"Mon 02 Nov", city:"CTU", transit:[["cqcd",false]], plan:"75 minutes to Chengdu. Teahouse afternoon in People's Park."},
+  {d:"Tue 03 Nov", city:"CTU", plan:"Panda gate at 08:00 — they eat till 9:30. Jinli and face-changing opera at night."},
   {d:"Wed 04 Nov", city:"XIY", transit:[["cdxa",false]], plan:"Three hours through the Qinling tunnels. Muslim Quarter after dark."},
   {d:"Thu 05 Nov", city:"XIY", plan:"The Terracotta Army, all day. Passport is the ticket."},
   {d:"Fri 06 Nov", city:"BJS", transit:[["xabj",false]], plan:"G-train to Beijing West. Qianmen in the evening."},
@@ -404,7 +404,7 @@ const FLIGHTS = [
     {id:"cz", nm:"China Southern, via Ürümqi", sub:"09:00 → 17:20 same day · 15h20 · the cheap daylight one-stop.", eur:326, lv:"live", site:"https://www.csair.com/"}],
    book:[["Air China, direct","https://www.airchina.de/DE/GB/Home"],["Lufthansa (codeshare search)","https://www.lufthansa.com/de/en/flight-search"],["Google Flights","https://www.google.com/travel/flights?q=one%20way%20flights%20from%20PKX%20to%20FRA%20on%202026-11-09&curr=EUR"],["Skyscanner","https://www.skyscanner.de/transport/flights/pkx/fra/261109/?adults=1&cabinclass=economy"]], seats:"1 seat — SKG routes home to SF, SKN from HKG"}
 ];
-const FIXED = 310; /* D964 sleeper berth €88 + rail & border €147 + ICE ×2 €75 */
+const FIXED = 310; /* D948 sleeper berth €88 + rail & border €147 + ICE ×2 €75 */
 const CHAPTERS = [
   {id:"ch-sel", no:"01", key:"SEL", city:"Seoul", cjk:"서울", cls:"kr", lang:"ko-KR", phon:"suh-OOL", line:"Palace mornings, market nights, five days on Enok's turf.",
    img:"seoul", dates:"21 — 26 Oct", nights:"5", arrive:"OZ542, lands 14:35", eat:"Gwangjang Market", sleep:"Myeongdong · twin ≈ €65 pp", burn:"≈ €133/day",
@@ -426,38 +426,37 @@ const CHAPTERS = [
    foodcap:"Roast goose, the Wan Chai way", foodoff:"off-l",
    next:"→ High-speed rail · West Kowloon → Shenzhen Futian · Wed 28 Oct · 14 min · ~€9 · both immigrations cleared indoors"},
   {id:"ch-szx", no:"03", key:"SZX", city:"Shenzhen", cjk:"深圳", cls:"sc", lang:"zh-CN", phon:"shun-JEN", line:"Border hop, tech markets, and Hush's factory day.",
-   img:"shenzhen", dates:"28 — 30 Oct", nights:"2 + a night on rails", arrive:"HSR, 14 min from HK", eat:"Chaoshan beef hotpot", sleep:"Futian · ≈ €33 pp", burn:"≈ €75/day",
+   img:"shenzhen", dates:"28 — 29 Oct", nights:"1", arrive:"HSR, 14 min from HK", eat:"Chaoshan beef hotpot", sleep:"Aurora Apartment, Futian ✓ · €11.65 pp", burn:"≈ €62 the day",
    see:[["Free Sky deck, 541 m","€24","Trip.com, passports"],["Huaqiangbei markets","free","add every good stall on WeChat"],["OCT Loft + Dafen","free","if the factory day runs short"]],
-   intro:"First mainland stamp, cleared indoors at Futian station. Two working days: one for the Free Sky deck and the Huaqiangbei markets, one for Hush's factory visits — appointments locked weeks ahead, see the runbook. Hard stop Friday 16:30: bags, Shenzhen North, the 18:32 sleeper.",
-   days:[["Wed 28","Cross, then climb.","Free Sky deck at 541 m — Hong Kong on the horizon. Chaoshan hotpot for dinner."],
-         ["Thu 29","Guangzhou raid.","Day-trip by 30-minute train — see the next chapter."],
-         ["Fri 30","The Hush day.","Two factories in one cluster (agent-arranged, hosted lunch — accept it) or a Huaqiangbei walk-in day. Hard stop 16:30; bags; Shenzhen North; D964 at 18:32."]],
+   intro:"First mainland stamp, cleared indoors at Futian station — then one dense day. Cross early: Huaqiangbei's markets or the Hush factory meeting fill the afternoon, Free Sky at dusk, hotpot after. Bags ride along to Guangzhou in the morning.",
+   days:[["Wed 28","Cross early, use the day.","Border by 10:00. Huaqiangbei or Hush's factory cluster, Free Sky at 541 m for dusk, Chaoshan hotpot."]],
    foodcap:"Hand-cut beef, seconds in clear broth", foodoff:"off-r",
-   next:"→ Day return · Shenzhen ⇄ Guangzhou · Thu 29 Oct · 30 – 40 min each way · ~€10 each way"},
-  {id:"ch-gz", no:"03·b", key:"GZ", city:"Guangzhou", cjk:"广州", cls:"sc", lang:"zh-CN", phon:"gwahng-JOH", line:"One perfect day — morning tea to light show.",
-   img:"guangzhou", dates:"29 Oct", nights:"day-trip", arrive:"HSR from Futian", eat:"Taotaoju, est. 1880", sleep:"nowhere — that's the trick", burn:"≈ €70 for the day",
+   next:"→ HSR · Futian → Guangzhou South · Thu 29 Oct · ~35 min · ~€10 · bags come along"},
+  {id:"ch-gz", no:"04", key:"GZ", city:"Guangzhou", cjk:"广州", cls:"sc", lang:"zh-CN", phon:"gwahng-JOH", line:"Two nights on the Pearl — morning tea to light show.",
+   img:"guangzhou", dates:"29 — 31 Oct", nights:"2", arrive:"HSR, 35 min from Futian", eat:"Taotaoju, est. 1880", sleep:"Mihua Apartment, Haizhu ✓ · €25.95 pp/nt", burn:"≈ €60/day",
    see:[["Canton Tower decks","€18.30","16:00–18:00 for dusk + LEDs"],["Chen Clan Ancestral Hall","€1.20","the carved roofline"],["Shamian Island","free","colonial arcades, slow walk"]],
-   intro:"Canton Fair doubles every hotel rate this fortnight, so it's a day-trip: 30–40 minutes each way from Futian, no bags. Yum cha is a morning ritual — Taotaoju by 10:00, the halls thin out by noon. Canton Tower 16:00–18:00 catches dusk and the LEDs; last trains back run past 22:00.",
-   days:[["Thu 29","In for zaocha.","Yum cha is a morning ritual — the halls quiet by noon. Canton Tower 16:00–18:00, last train back."]],
+   intro:"Upgraded from day-trip to two nights — the three-bedroom on the Haizhu side costs €26 a head and dodges the Canton Fair phases. Yum cha is a morning ritual: Taotaoju by 10:00, halls thin by noon. Canton Tower 16:00–18:00 catches dusk and the LEDs.",
+   days:[["Thu 29","In by noon.","Check in Haizhu after 14:00. Canton Tower 16:00–18:00 for dusk and the LEDs."],
+         ["Fri 30","The full day.","Taotaoju zaocha by 10:00, Chen Clan Ancestral Hall, Shamian Island at golden hour."],
+         ["Sat 31","Checkout, then the sleeper.","Bags stored by noon, slow afternoon, D948 from Guangzhou South at 19:01."]],
    foodcap:"Har gow at a Liwan teahouse", foodoff:"off-l",
-   next:"→ D964 night sleeper · Shenzhen North → Chongqing West · Fri 30 Oct · 18:32 – 06:05 · lie-flat berths ~€88–99 · presale opens 16 Oct"},
-  {id:"ch-ckg", no:"04", key:"CKG", city:"Chongqing", cjk:"重庆", cls:"sc", lang:"zh-CN", phon:"chawng-CHING", line:"Bridges, fog, and the spiciest food of the trip.",
-   img:"chongqing", dates:"31 Oct — 1 Nov", nights:"1 + a dawn arrival", arrive:"D964 sleeper — wake at 06:05", eat:"Nine-grid hotpot", sleep:"Jiefangbei · ≈ €28 pp", burn:"≈ €65/day",
+   next:"→ D948 night sleeper · Guangzhou South → Chongqing West · Sat 31 Oct · 19:01 – ~06:00 · lie-flat berths ~€88–99 · presale opens 16 Oct"},
+  {id:"ch-ckg", no:"05", key:"CKG", city:"Chongqing", cjk:"重庆", cls:"sc", lang:"zh-CN", phon:"chawng-CHING", line:"Bridges, fog, and the spiciest food of the trip.",
+   img:"chongqing", dates:"1 — 2 Nov", nights:"1, off the sleeper at dawn", arrive:"D948 sleeper — wake ~06:00", eat:"Nine-grid hotpot", sleep:"Jiefangbei · ≈ €28 pp", burn:"≈ €65/day",
    see:[["Hongya Cave + Liziba + Ciqikou","free","the whole cyberpunk circuit costs nothing"],["Yangtze cable car","€3.80","queue early or late"],["Raffles Exploration Deck","€22.80","or the WFC deck at €15"]],
-   intro:"The sleeper lands at 06:05 and the day runs long: bags to the hotel, xiaomian for breakfast, Ciqikou before the tour buses, the Yangtze cable car, then Hongya Cave from Qiansimen Bridge at blue hour. Hotpot: 'wei la' is the survivable middle heat, and wear clothes you don't mind sacrificing. Book panda tickets tonight.",
-   days:[["Sat 31","The long Saturday.","Bags at the hotel by 07:00, xiaomian breakfast. Ciqikou, the cable car, Hongya from Qiansimen Bridge at blue hour, jiugongge hotpot in expendable clothes. Book panda tickets tonight."]],
+   intro:"The sleeper lands around 06:00 and the day runs long: bags to the hotel, xiaomian for breakfast, Ciqikou before the tour buses, the Yangtze cable car, then Hongya Cave from Qiansimen Bridge at blue hour. Hotpot: 'wei la' is the survivable middle heat, and wear clothes you don't mind sacrificing. Book panda tickets tonight.",
+   days:[["Sun 01","The long Sunday.","Bags at the hotel by 07:00, xiaomian breakfast. Ciqikou, the cable car, Hongya from Qiansimen Bridge at blue hour, jiugongge hotpot. 20:00 — Forbidden City drop; book pandas for Tuesday too."]],
    foodcap:"The nine grids, each a different heat", foodoff:"off-r",
-   next:"→ High-speed rail · Chongqing → Chengdu · Sun 1 Nov · 1h15 · ~€18 · trains every 15 minutes"},
-  {id:"ch-ctu", no:"05", key:"CTU", city:"Chengdu", cjk:"成都", cls:"sc", lang:"zh-CN", phon:"chuhng-DOO", line:"Pandas at 08:00, teahouses after.",
-   img:"chengdu", dates:"1 — 4 Nov", nights:"3", arrive:"HSR, 75 min", eat:"Chen Mapo Tofu, since 1862", sleep:"Chunxi / Taikoo Li · ≈ €31 pp", burn:"≈ €72/day",
+   next:"→ High-speed rail · Chongqing → Chengdu · Mon 2 Nov · 1h15 · ~€18 · trains every 15 minutes"},
+  {id:"ch-ctu", no:"06", key:"CTU", city:"Chengdu", cjk:"成都", cls:"sc", lang:"zh-CN", phon:"chuhng-DOO", line:"Pandas at 08:00, teahouses after.",
+   img:"chengdu", dates:"2 — 4 Nov", nights:"2", arrive:"HSR, 75 min", eat:"Chen Mapo Tofu, since 1862", sleep:"Chunxi / Taikoo Li · ≈ €31 pp", burn:"≈ €72/day",
    see:[["Panda Base + shuttle","€10.80","gate at 08:00, real-name tickets"],["Face-changing opera","€28","mid-tier seat, book a day ahead"],["Heming Teahouse","€4","a chair, a lid, an afternoon"],["Wenshu + Jinli","free","evening lanterns"]],
-   intro:"Three nights, deliberately slower. One fixed time: the panda gate at 08:00 — feeding ends around 9:30, after that they sleep. And Sunday 20:00 China time the Forbidden City tickets drop; that alarm matters more than anything else this week. The rest is teahouses, Jinli, and mapo tofu at the 1862 original.",
-   days:[["Sun 01","Arrive and slow down.","People's Park teahouse, ear-cleaning optional. 20:00: Forbidden City tickets drop."],
-         ["Mon 02","Pandas at opening.","Gate at 08:00, star enclosures first. Afternoon free, or Leshan."],
-         ["Tue 03","The classics.","Wenshu Monastery, Jinli Street, face-changing opera at night."]],
+   intro:"Two nights, deliberately slower. One fixed time: the panda gate at 08:00 Tuesday — feeding ends around 9:30, after that they sleep. The rest is teahouses, Jinli, and mapo tofu at the 1862 original.",
+   days:[["Mon 02","Arrive and slow down.","75 minutes from Chongqing. People's Park teahouse, ear-cleaning optional."],
+         ["Tue 03","Pandas, then the classics.","Gate at 08:00, star enclosures first. Jinli Street and the face-changing opera at night."]],
    foodcap:"Mapo tofu at the 1862 original", foodoff:"off-l",
    next:"→ High-speed rail · Chengdu → Xi'an · Wed 4 Nov · ~3h through the Qinling tunnels · ~€34"},
-  {id:"ch-xiy", no:"06", key:"XIY", city:"Xi'an", cjk:"西安", cls:"sc", lang:"zh-CN", phon:"shee-AHN", line:"Eight thousand warriors and the best street food yet.",
+  {id:"ch-xiy", no:"07", key:"XIY", city:"Xi'an", cjk:"西安", cls:"sc", lang:"zh-CN", phon:"shee-AHN", line:"Eight thousand warriors and the best street food yet.",
    img:"xian", dates:"4 — 6 Nov", nights:"2", arrive:"HSR, ~3h", eat:"Muslim Quarter, after dark", sleep:"Bell Tower, in the walls · ≈ €26 pp", burn:"≈ €70/day",
    see:[["Terracotta Army","€15.20","passport = ticket, 7-day window"],["City Wall + bike","€12.50","the dusk lap"],["Bell + Drum Towers","€6.30","combo ticket"],["Muslim Quarter","free","it IS the food budget"]],
    intro:"Two nights inside the walls. The Army is a full day out in Lintong: passport is the ticket, arrive at opening, and skip the 10:30–14:30 tour-bus crush. Eat in the Muslim Quarter both nights — cheaper and better than any restaurant plan. The city wall bike lap fits best at dusk.",
@@ -465,7 +464,7 @@ const CHAPTERS = [
          ["Thu 05","The Army, all day.","Arrive at opening, dodge the 10:30–14:30 crush, save Pit 1 for last. City wall at dusk."]],
    foodcap:"Biangbiang noodles, name and all", foodoff:"off-r",
    next:"→ G-train · Xi'an → Beijing · Fri 6 Nov · ~4h30 · ~€66 · the one rail leg that sells out — pre-ordered · or flip it: the Z20 night sleeper, 19:55 → 07:10, berth ~€55 — a bonus Xi'an day and one hotel night saved"},
-  {id:"ch-bjs", no:"07", key:"BJS", city:"Beijing", cjk:"北京", cls:"sc", lang:"zh-CN", phon:"bay-JING", line:"The finale: wall, palace, duck. Then home.",
+  {id:"ch-bjs", no:"08", key:"BJS", city:"Beijing", cjk:"北京", cls:"sc", lang:"zh-CN", phon:"bay-JING", line:"The finale: wall, palace, duck. Then home.",
    img:"beijing", dates:"6 — 9 Nov", nights:"3", arrive:"G-train into Beijing West", eat:"Siji Minfu, before 17:00", sleep:"Dongcheng / hutong court · ≈ €40 pp", burn:"≈ €87/day",
    see:[["Forbidden City, low season","€5.10","drops 7 days ahead, 20:00 CN — alarm set"],["Mutianyu, all-in","€24.70","entry + shuttle + cable"],["Jingshan Hill","€1.30","the golden-roof overhead"],["Temple of Heaven","€3.50","morning-exercise hour"]],
    intro:"Three nights to close it out. Mutianyu Saturday: 90 minutes out, cable car up, toboggan down, real layers — the wind bites in November. Forbidden City Sunday on the booked morning slot, then duck at Siji Minfu before 17:00 to beat the queue. Monday the DiDi goes to Daxing — say it twice, not Capital.",
@@ -480,15 +479,15 @@ const RUNBOOK = [
   ["Now — KSG's paperwork","p0","K-ETA tonight — <a href='https://www.k-eta.go.kr/' target='_blank' rel='noopener'>k-eta.go.kr</a>, ~€6, 3-year validity. <small>Then early September: the China L visa at the CVASC Berlin — COVA form online first, then the appointment (slots run weeks out — book it now for early Sept); passport + Aufenthaltstitel, fingerprints on site, ~4 working days. The refundable hotel bookings below feed this form — make them first. Tunisian passports get no China visa-free and no 240-hour transit (footnote ¹).</small>"],
   ["Now — same message","p0","SKG ✓ booked UA893, SFO → Seoul (lands 21 Oct 15:00, 25 min after KSG) — still open: he files his <b>China visa</b>: 10-year L tourist visa at the SF consulate — <a href='https://cova.mfa.gov.cn/' target='_blank' rel='noopener'>COVA form online</a>, walk-in, $140, ~4 business days. Verified: the 240-hour transit does NOT cover our ~12-day stay (footnote ¹⁰)."],
   ["Now — the Hush funnel","p0","Factory visits only happen if the outreach starts NOW: Alibaba/1688 supplier contact + samples by early Sept, shortlist 3–5, a China-enforceable NNN (in Chinese) with 1–2 finalists by mid-Sept, visit slots locked 2–3 weeks out, WeChat reconfirm at 1 week and 24 h. <small>And register the Hush trademark in China before broad outreach — it's first-to-file. Plan B needs zero appointments: a full Huaqiangbei walk-in day.</small>"],
-  ["Sept — in this order","p1","Hotels on <a href='https://www.trip.com/hotels/' target='_blank' rel='noopener'>Trip.com</a>: <b>Seoul first</b> (late Oct = peak foliage), then Shenzhen (Canton-Fair spillover), then HK; the four inland cities are shoulder season — book refundable, 4–6 weeks out. Do the mainland five NOW: both visa applications (KSG Berlin, SKG SF) list these hotels. <small>None in Guangzhou. Mainland hotels handle police registration; book 3 named guests, passports on file. Districts + rates in the ledger.</small>"],
+  ["Sept — in this order","p1","Hotels: <b>HK ✓ Shenzhen ✓ Guangzhou ✓ booked</b> (real rates in the ledger). Left, refundable, 3 named guests, before the visa forms: Chongqing, Chengdu, Xi'an, Beijing — plus <b>Seoul</b>, first of the rest (late Oct = peak foliage). <small>Mainland hotels handle police registration; passports on file. The booked vouchers feed both visa applications (KSG Berlin, SKG SF).</small>"],
   ["By 8 Oct","p1","Mutianyu tickets for Sat 7 Nov — <a href='https://www.mutianyugreatwall.com/' target='_blank' rel='noopener'>official site</a>. <small>30-day window; one ticket per passport, phone number required. Bookable from Berlin.</small>"],
   ["By 10 Oct","p1","Pre-order all China trains, three seats each, on <a href='https://www.trip.com/trains/' target='_blank' rel='noopener'>Trip.com</a>. <small>12306 only sells 15 days out; pre-orders auto-buy the second each window opens. Xi'an → Beijing is the one that sells out. Decide before this pre-order: the G-train, or the Z20 night sleeper (19:55 → 07:10) for a bonus Xi'an day and a saved hotel night — see footnote ¹¹.</small>"],
-  ["Fri 16 Oct","p0","D964 night-sleeper berths go on sale (15-day presale): 3 second-class berths, <b>one order</b>, the hour it opens — <a href='https://www.trip.com/trains/china/route/Shenzhen-to-Chongqing/' target='_blank' rel='noopener'>Trip.com pre-order</a>. <small>Friday-night berths go fast, lower berths first; the 4th berth in the compartment goes to a stranger unless you buy it (~€90 privacy option). Re-verify D964 runs on 30 Oct after China Rail's ~11 Oct timetable adjustment — fallback: D948 ex-Guangzhou South 19:01, then the flight. Never Z586 (arrives 15:24, burns Saturday).</small>"],
+  ["Fri 16 Oct","p0","D948 night-sleeper berths (Guangzhou South 19:01 → Chongqing ~06:00) go on sale — 15-day presale, 3 berths, <b>one order</b>, the hour it opens: <a href='https://www.trip.com/trains/china/route/Guangzhou-to-Chongqing/' target='_blank' rel='noopener'>Trip.com pre-order</a>. <small>Saturday-night berths go fast, lower berths first; the 4th berth in the compartment goes to a stranger unless you buy it (~€90 privacy option). Re-verify D948 runs on 31 Oct after China Rail's ~11 Oct timetable adjustment — fallback: morning G-trains GZ → Chongqing, ~4h30.</small>"],
   ["19 Oct","p0","Korea e-Arrival Card — <a href='https://www.e-arrivalcard.go.kr/portal/main/index.do' target='_blank' rel='noopener'>e-arrivalcard.go.kr</a>. <small>Free; one group filing covers KSG + SKG (SKN skips Korea). Valid only within 72 h of the Wednesday landing.</small>"],
   ["19 Oct","p1","ICE tickets: <a href=\"https://www.bahn.de/buchung/fahrplan/suche#sts=true&so=Berlin%20Hbf&zo=Frankfurt(M)%20Flughafen%20Fernbf&hd=2026-10-20T10:00:00&kl=2\" target='_blank' rel='noopener'>out 20 Oct</a> · <a href=\"https://www.bahn.de/buchung/fahrplan/suche#sts=true&so=Frankfurt(M)%20Flughafen%20Fernbf&zo=Berlin%20Hbf&hd=2026-11-09T19:00:00&kl=2\" target='_blank' rel='noopener'>home 9 Nov</a>. <small>4 Reisende; make the return Flexpreis — it hangs off a long-haul landing.</small>"],
   ["25 – 26 Oct","p1","Winter schedules load at the EU clock change. <small>Recheck every remaining departure time — booking airline-direct means changes land in your inbox.</small>"],
   ["Thu 29 Oct","p1","Terracotta Army tickets for Thu 5 Nov. <small>7-day window opens tonight; digital-only, real-name, the physical passport is the ticket.</small>"],
-  ["Sat 31 Oct","p1","Panda Base for Mon 2 Nov — <a href='https://www.trip.com/things-to-do/list?keyword=Chengdu%20Research%20Base%20of%20Giant%20Panda%20Breeding' target='_blank' rel='noopener'>via Trip.com, ~€8</a>. <small>Official sales are WeChat-only; Trip.com is the practical path for foreigners.</small>"],
+  ["Sun 1 Nov","p1","Panda Base for Tue 3 Nov — <a href='https://www.trip.com/things-to-do/list?keyword=Chengdu%20Research%20Base%20of%20Giant%20Panda%20Breeding' target='_blank' rel='noopener'>via Trip.com, ~€8</a>. <small>Official sales are WeChat-only; Trip.com is the practical path for foreigners.</small>"],
   ["Sun 1 Nov, 20:00 CN","p0","Forbidden City for Sun 8 Nov — <a href='https://ticket.dpm.org.cn/' target='_blank' rel='noopener'>ticket.dpm.org.cn</a>. <small>Drops exactly 7 days ahead at 20:00 China time and sells out in minutes. All three passports in one order. This is the alarm to set now.</small>"]
 ];
 const CAST = [
@@ -500,7 +499,7 @@ const CAST = [
 const FOOTNOTES = [
   "Visas, per passport. KSG (Tunisian, Berlin resident): Korea 30 days visa-free but K-ETA required (k-eta.go.kr, ~€6, valid 3 years); Hong Kong 30 days visa-free; mainland China VISA REQUIRED — single-entry L at the Chinese Visa Application Service Centre Berlin: COVA online, appointment, passport + Aufenthaltstitel, fingerprints on site, ~€95–125, ~4 working days. Apply early September (within 3 months of the Oct 28 entry; the form wants flights + hotels). No China visa-free and no 240-hour transit for Tunisian passports. SKN: EU-passport rules assumed (Korea K-ETA-exempt, HK 90 days, China 30 days visa-free through 31 Dec 2026) — confirm his passport. SKG: footnote 10. e-Arrival Card: everyone landing in Korea, within 72 h.",
   "Beijing has two airports 80 km apart. CA957 leaves from Daxing (PKX); the identical-looking Capital departure costs roughly double. Put 'Daxing' in the calendar and tell the DiDi driver twice.",
-  "Canton Fair, 140th session: Phase 2 runs 23–27 Oct, Phase 3 runs 31 Oct – 4 Nov. Any Guangzhou hotel night in that window pays trade-fair rates — hence the day-trip.",
+  "Canton Fair, 140th session: Phase 2 runs 23–27 Oct, Phase 3 runs 31 Oct – 4 Nov. The booked nights (29–30 Oct) slot exactly into the gap between the phases — which is why a three-bedroom on the Pearl cost €26 a head.",
   "Carry one printed copy of the Beijing → Frankfurt booking per person: the check-in desk at Incheon, HK immigration and the Futian border officer can each ask for onward proof.",
   "China's internet: activate a Hong-Kong-gateway roaming eSIM before crossing (WhatsApp and Google then work without a VPN). Google Maps is offset 50–500 m in China — navigate with Amap. Alipay pays for everything; link a Visa or Mastercard at home first.",
   "t'way suspends its Frankfurt long-haul after 25 Oct and is financially shaky — fine for a short hop on its home network, not for anything with a connection riding on it.",
@@ -560,7 +559,7 @@ function refresh(){
     rows.push([F.route, o.nm.split(',')[0], o.eur]);
     F.opts.forEach(x=>document.getElementById(`o-${F.key}-${x.id}`).classList.toggle('sel', x.id===sel[F.key]));
   });
-  rows.push(['D964 night sleeper', 'Shenzhen → Chongqing, a berth', 88]);
+  rows.push(['D948 night sleeper', 'Guangzhou → Chongqing, a berth', 88]);
   rows.push(['China rail & border', 'all the daytime legs', 147]);
   rows.push(['ICE ×2', 'Berlin ⇄ Frankfurt', 75]);
   document.getElementById('rc-rows').innerHTML = rows.map(r=>
@@ -569,7 +568,7 @@ function refresh(){
   document.getElementById('t-num').innerHTML = `€${(per*m).toLocaleString('en')}${crew?' <em>×3</em>':''}`;
   document.getElementById('t-note').innerHTML = crew
     ? `Rows stay per seat; the total is ×3 — rough on purpose, since SKG and SKN book their own long-hauls.`
-    : `OZ542 is booked — with it locked, the remaining swing is €1,364–1,558. Everyone books his own seats — SKG and SKN mirror the shared flights, links above. The ledger below adds the ground: ≈ €3,040–3,415 all-in for KSG.`;
+    : `OZ542 is booked — with it locked, the remaining swing is €1,364–1,558. Everyone books his own seats — SKG and SKN mirror the shared flights, links above. The ledger below adds the ground: ≈ €2,930–3,245 all-in for KSG.`;
 }
 document.getElementById('pp').onclick = e=>{crew=false;e.target.classList.add('on');document.getElementById('p4').classList.remove('on');refresh();};
 document.getElementById('p4').onclick = e=>{crew=true;e.target.classList.add('on');document.getElementById('pp').classList.remove('on');refresh();};
@@ -657,12 +656,12 @@ CHAPTERS.forEach(C=>initCarousel(document.getElementById('car-'+C.img), SLIDES[C
 /* runbook / cast / footnotes / sources */
 const LEDGER = [
   ["Seoul","5","Myeongdong — Oriens, Nine Tree tier","€65","€48","€667"],
-  ["Hong Kong","2","Tsim Sha Tsui — Empire Kowloon tier","€60","€55","€284"],
-  ["Shenzhen","2","Futian — Hampton by Hilton Huaqiangbei","€33","€26","€149"],
-  ["Guangzhou","—","day-trip, deliberately hotel-free","—","€22","€70"],
-  ["Night train","1","a lie-flat berth somewhere over Guizhou","in transport","—","—"],
+  ["Hong Kong","2","Rambler Oasis, Tsing Yi ✓ booked","€22.70","€55","€209"],
+  ["Shenzhen","1","Aurora Boutique Apartment, Futian ✓ booked","€11.65","€26","€62"],
+  ["Guangzhou","2","Mihua Apartment, Haizhu ✓ booked","€25.95","€22","€121"],
+  ["Night train","1","a lie-flat berth out of Guangzhou South","in transport","—","—"],
   ["Chongqing","1","Jiefangbei — river-view houses run cheap","€28","€24","€136"],
-  ["Chengdu","3","Chunxi / Taikoo Li — Mercure tier","€31","€24","€217"],
+  ["Chengdu","2","Chunxi / Taikoo Li — Mercure tier","€31","€24","€155"],
   ["Xi'an","2","in the walls, Bell Tower — Center Hotel","€26","€21","€140"],
   ["Beijing","3","Dongcheng — UrCove by Hyatt, hutong courts","€40","€29","€262"]
 ];
@@ -779,8 +778,7 @@ document.getElementById('z-reset').onclick=()=>flyTo([...HOME_ROT],1);
 let day=0, playing=false, animId=null;
 const SLOT=2400;
 function legsDoneThrough(i){ const s=new Set();
-  for(let j=0;j<=i;j++) (DAYS[j].transit||[]).forEach(([id])=>{ if(id!=='gz') s.add(id); });
-  if(i>=10) s.add('gz'); return s; }
+  for(let j=0;j<=i;j++) (DAYS[j].transit||[]).forEach(([id])=>s.add(id)); return s; }
 function setTraveler(i,t){ const dd=DAYS[i];
   if(!dd.transit){ const c=CITIES[dd.city]; travelerLL=[c.lng,c.lat]; return; }
   const segs=dd.transit, n=segs.length, pos=Math.min(t*n,n-1e-6), si=Math.floor(pos), st=pos-si;
