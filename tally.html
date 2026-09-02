@@ -22,20 +22,22 @@ h1{font-family:var(--serif);font-weight:400;font-size:clamp(44px,9vw,64px);line-
 .sub{font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;color:var(--ink2);margin-top:12px}
 .eyebrow{font-family:var(--sans);font-size:10.5px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--ink2);
   border-bottom:1px solid var(--ink);padding-bottom:7px;margin:44px 0 4px}
-.row{display:grid;grid-template-columns:64px 1fr auto auto;gap:12px;align-items:baseline;padding:11px 0;border-bottom:1px solid var(--line)}
+.row{display:grid;grid-template-columns:52px 1fr 92px;gap:12px;align-items:baseline;padding:11px 0;border-bottom:1px solid var(--line)}
 .row .dt{font-family:var(--mono);font-size:11px;color:var(--ink2);white-space:nowrap}
 .row .what{font-size:14.5px}
 .row .what small{display:block;font-size:11px;color:var(--ink2)}
-.row .who{font-family:var(--mono);font-size:11.5px;color:var(--accent);white-space:nowrap}
+.tag{font-family:var(--mono);font-size:10px;letter-spacing:.06em;border:1px solid currentColor;border-radius:3px;padding:0 5px;margin-left:8px;vertical-align:2px;white-space:nowrap}
 .row .amt{font-family:var(--mono);font-size:13px;text-align:right;white-space:nowrap}
 .row .amt.pending{color:var(--ink2);font-style:italic}
-.bal{display:grid;grid-template-columns:1fr auto auto auto;gap:12px;align-items:baseline;padding:11px 0;border-bottom:1px solid var(--line)}
+.bal{display:grid;grid-template-columns:1fr 88px 88px 96px;gap:10px;align-items:baseline;padding:11px 0;border-bottom:1px solid var(--line)}
 .bal .nm{font-size:14.5px}
 .bal .m{font-family:var(--mono);font-size:12.5px;text-align:right}
 .bal .m.pos{color:#3d6b35}
 .bal .m.neg{color:var(--accent)}
-.bal-head{display:grid;grid-template-columns:1fr auto auto auto;gap:12px;font-family:var(--sans);font-size:9.5px;font-weight:500;
+.bal-head{display:grid;grid-template-columns:1fr 88px 88px 96px;gap:10px;font-family:var(--sans);font-size:9.5px;font-weight:500;
   letter-spacing:.14em;text-transform:uppercase;color:var(--ink2);padding-bottom:6px}
+.bal-head span{text-align:right}
+@media(max-width:480px){.bal,.bal-head{grid-template-columns:1fr 72px 72px 84px}.bal .m{font-size:11.5px}}
 .settle{margin-top:8px}
 .settle .s{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:13px 0;border-bottom:1px solid var(--line);font-size:15px}
 .settle .s .m{font-family:var(--mono);font-size:14px;color:var(--accent)}
@@ -72,6 +74,9 @@ footer a{color:var(--accent);text-decoration:none}
 
 <script>
 const CREW = { KSG:'Kais', SKG:'Sully', SKN:'Iskan' };
+const COLOR = { KSG:'#B5442E', SKG:'#3D6B35', SKN:'#2E5A8F' };
+const tag = k => `<span class="tag" style="color:${COLOR[k]}">${k}</span>`;
+const who = k => `<span style="color:${COLOR[k]}">${CREW[k]}</span>`;
 
 /* one line per payment. eur:null = booked, amount pending. split defaults to all three. */
 const ENTRIES = [
@@ -86,8 +91,7 @@ const pending = ENTRIES.length - live.length;
 
 document.getElementById('rows').innerHTML = ENTRIES.map(e =>
   `<div class="row"><span class="dt">${e.d}</span>
-     <span class="what">${e.what}<small>${e.detail||''}</small></span>
-     <span class="who">${e.by}</span>
+     <span class="what">${e.what}${tag(e.by)}<small>${e.detail||''}</small></span>
      <span class="amt ${e.eur==null?'pending':''}">${e.eur==null?'pending':fmt(e.eur)}</span></div>`).join('');
 
 const pot = live.reduce((s,e)=>s+e.eur, 0);
@@ -101,11 +105,12 @@ live.forEach(e => {
   split.forEach(k => share[k] += e.eur / split.length);
 });
 
+const sfmt = n => (n < 0 ? '−' : '+') + fmt(Math.abs(n));
 document.getElementById('bals').innerHTML = Object.keys(CREW).map(k => {
   const net = paid[k] - share[k];
-  return `<div class="bal"><span class="nm">${CREW[k]} <span style="color:var(--ink2);font-family:var(--mono);font-size:11px">${k}</span></span>
+  return `<div class="bal"><span class="nm">${who(k)}${tag(k)}</span>
     <span class="m">${fmt(paid[k])}</span><span class="m">${fmt(share[k])}</span>
-    <span class="m ${net>1?'pos':net<-1?'neg':''}">${net>0?'+':''}${fmt(net)}</span></div>`;
+    <span class="m ${net>1?'pos':net<-1?'neg':''}">${sfmt(net)}</span></div>`;
 }).join('');
 
 /* minimal transfers */
@@ -119,7 +124,7 @@ while (i < j) {
   if (owe[j].n < 1) j--;
 }
 document.getElementById('settle').innerHTML = moves.length
-  ? moves.map(([a,b,m]) => `<div class="s"><span>${CREW[a]} pays ${CREW[b]}</span><span class="m">${fmt(m)}</span></div>`).join('')
+  ? moves.map(([a,b,m]) => `<div class="s"><span>${who(a)} pays ${who(b)}</span><span class="m">${fmt(m)}</span></div>`).join('')
   : '<div class="s"><span>All square</span><span class="m">—</span></div>';
 
 document.getElementById('note').textContent = pending
