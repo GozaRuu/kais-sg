@@ -54,6 +54,7 @@ footer a{color:var(--accent);text-decoration:none}
 <header class="col">
   <h1>The Tally</h1>
   <div class="sub">GOOD MEN IN THE EAST · SHARED COSTS · EUR · SPLIT ×3</div>
+  <div class="sub" style="margin-top:6px;color:var(--accent)">LAST UPDATED · 02 SEP 2026</div>
 </header>
 
 <main class="col">
@@ -78,7 +79,8 @@ const COLOR = { KSG:'#B5442E', SKG:'#3D6B35', SKN:'#2E5A8F' };
 const tag = k => `<span class="tag" style="color:${COLOR[k]}">${k}</span>`;
 const who = k => `<span style="color:${COLOR[k]}">${CREW[k]}</span>`;
 
-/* one line per payment. eur:null = booked, amount pending. split defaults to all three. */
+/* one line per payment. eur:null = booked, amount pending. split defaults to all three.
+   RULE: whenever ENTRIES change, bump the LAST UPDATED date in the header. */
 const ENTRIES = [
   { d:'27 Aug', what:'Hong Kong hotel', detail:'Rambler Oasis Hotel · 1 Tsing Yi Road, Kwai Tsing, Hong Kong · via Trip.com · Oct 26–28 · 2 nights', by:'KSG', eur:136.18 },
   { d:'02 Sep', what:'Shenzhen hotel', detail:'Aurora Boutique Apartment · Anqiao Garden, Antuoshan 7th Rd, Futian, Shenzhen · via Trip.com · Oct 28–29 · 1 night', by:'SKN', eur:34.96 },
