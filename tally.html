@@ -10,18 +10,22 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23F7F4EE%22%2F%3E%3Ctext%20x%3D%2250%22%20y%3D%2272%22%20font-size%3D%2270%22%20text-anchor%3D%22middle%22%20fill%3D%22%231A1815%22%20font-family%3D%22serif%22%3E%E8%B4%A6%3C%2Ftext%3E%3C%2Fsvg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500&family=IBM+Plex+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500&family=IBM+Plex+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&family=Noto+Serif+SC:wght@500&display=swap" rel="stylesheet">
 <style>
-:root{--paper:#F7F4EE;--ink:#1A1815;--ink2:#8A8378;--line:#E3DED5;--accent:#B5442E;
+:root{--paper:#F7F4EE;--ink:#1A1815;--ink2:#8A8378;--line:#E3DED5;--accent:#2E7D5B;
   --serif:'Instrument Serif',Georgia,serif;--sans:'Archivo',-apple-system,sans-serif;--mono:'IBM Plex Mono',ui-monospace,monospace}
 *{margin:0;padding:0;box-sizing:border-box}
 body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.6}
 .col{max-width:640px;margin:0 auto;padding:0 20px}
-header{padding:60px 0 40px;text-align:center}
+header{padding:60px 0 40px;text-align:center;position:relative}
+.sc{font-family:'Noto Serif SC',serif}
+.mark{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+  font-size:170px;font-weight:500;opacity:.05;pointer-events:none;user-select:none}
 h1{font-family:var(--serif);font-weight:400;font-size:clamp(44px,9vw,64px);line-height:1}
 .sub{font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;color:var(--ink2);margin-top:12px}
-.eyebrow{font-family:var(--sans);font-size:10.5px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--ink2);
+.eyebrow{display:flex;justify-content:space-between;align-items:baseline;font-family:var(--sans);font-size:10.5px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--ink2);
   border-bottom:1px solid var(--ink);padding-bottom:7px;margin:44px 0 4px}
+.eyebrow .zh{font-size:12px;letter-spacing:.35em;color:var(--ink2);font-weight:500}
 .row{display:grid;grid-template-columns:52px 1fr 92px;gap:12px;align-items:baseline;padding:11px 0;border-bottom:1px solid var(--line)}
 .row .dt{font-family:var(--mono);font-size:11px;color:var(--ink2);white-space:nowrap}
 .row .what{font-size:14.5px}
@@ -32,8 +36,8 @@ h1{font-family:var(--serif);font-weight:400;font-size:clamp(44px,9vw,64px);line-
 .bal{display:grid;grid-template-columns:1fr 88px 88px 96px;gap:10px;align-items:baseline;padding:11px 0;border-bottom:1px solid var(--line)}
 .bal .nm{font-size:14.5px}
 .bal .m{font-family:var(--mono);font-size:12.5px;text-align:right}
-.bal .m.pos{color:#3d6b35}
-.bal .m.neg{color:var(--accent)}
+.bal .m.pos{color:var(--accent)}
+.bal .m.neg{color:var(--ink);font-weight:600}
 .bal-head{display:grid;grid-template-columns:1fr 88px 88px 96px;gap:10px;font-family:var(--sans);font-size:9.5px;font-weight:500;
   letter-spacing:.14em;text-transform:uppercase;color:var(--ink2);padding-bottom:6px}
 .bal-head span{text-align:right}
@@ -52,21 +56,22 @@ footer a{color:var(--accent);text-decoration:none}
 <body>
 
 <header class="col">
+  <div class="mark sc" aria-hidden="true">账</div>
   <h1>The Tally</h1>
-  <div class="sub">GOOD MEN IN THE EAST · SHARED COSTS · EUR · SPLIT ×3</div>
+  <div class="sub">GOOD MEN IN THE EAST · <span class="sc" lang="zh" style="letter-spacing:.25em">东行账本</span> · EUR · SPLIT ×3</div>
   <div class="sub" style="margin-top:6px;color:var(--accent)">LAST UPDATED · 02 SEP 2026</div>
 </header>
 
 <main class="col">
-  <div class="eyebrow">Entries</div>
+  <div class="eyebrow"><span>Entries</span><span class="zh sc" lang="zh">条目</span></div>
   <div id="rows"></div>
   <div class="total"><span class="lbl">Shared pot so far</span><span class="val" id="pot">€0</span></div>
 
-  <div class="eyebrow">Balances</div>
+  <div class="eyebrow"><span>Balances</span><span class="zh sc" lang="zh">结余</span></div>
   <div class="bal-head"><span></span><span>paid</span><span>share</span><span>net</span></div>
   <div id="bals"></div>
 
-  <div class="eyebrow">To settle</div>
+  <div class="eyebrow"><span>To settle</span><span class="zh sc" lang="zh">结算</span></div>
   <div class="settle" id="settle"></div>
   <div class="note" id="note"></div>
 </main>
@@ -75,8 +80,8 @@ footer a{color:var(--accent);text-decoration:none}
 
 <script>
 const CREW = { KSG:'Kais', SKG:'Sully', SKN:'Iskan' };
-/* cinnabar · gold ochre · porcelain cobalt — 朱 金 青 */
-const COLOR = { KSG:'#BF3F26', SKG:'#B07A17', SKN:'#2F5FA3' };
+/* ink · gold ochre · porcelain cobalt — 墨 金 青 */
+const COLOR = { KSG:'#1A1815', SKG:'#B07A17', SKN:'#2F5FA3' };
 const TILT  = { KSG:'-2.5deg', SKG:'1.5deg', SKN:'-1deg' };
 const tag = k => `<span class="tag" style="background:${COLOR[k]};transform:rotate(${TILT[k]})">${k}</span>`;
 const who = k => `<span style="color:${COLOR[k]}">${CREW[k]}</span>`;
