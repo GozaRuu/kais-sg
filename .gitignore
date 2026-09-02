@@ -3,3 +3,4 @@
 *.png
 server.log
 .DS_Store
+records/
