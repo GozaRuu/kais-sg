@@ -1,0 +1,5 @@
+.claude/
+.playwright-mcp/
+*.png
+server.log
+.DS_Store
