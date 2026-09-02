@@ -75,12 +75,12 @@ const CREW = { KSG:'Kais', SKG:'Sully', SKN:'Iskan' };
 
 /* one line per payment. eur:null = booked, amount pending. split defaults to all three. */
 const ENTRIES = [
-  { d:'02 Sep', what:'Hotel', detail:'booked by KSG · city + amount pending', by:'KSG', eur:null },
-  { d:'02 Sep', what:'Hotel', detail:'booked by SKN · city + amount pending', by:'SKN', eur:null },
-  { d:'02 Sep', what:'Hotel', detail:'booked by SKN · city + amount pending', by:'SKN', eur:null },
+  { d:'27 Aug', what:'Hong Kong hotel', detail:'Rambler Oasis, Tsing Yi · Oct 26–28 · 2 nights · 3 guests', by:'KSG', eur:136.18 },
+  { d:'02 Sep', what:'Shenzhen hotel', detail:'Aurora Boutique Apartment, Futian · Oct 28–29 · 1 night · 3 guests', by:'SKN', eur:34.96 },
+  { d:'02 Sep', what:'Guangzhou hotel', detail:'Mihua International Apartment, Haizhu · Oct 29–31 · 2 nights · 3 guests', by:'SKN', eur:155.72 },
 ];
 
-const fmt = n => '€' + n.toLocaleString('en', {maximumFractionDigits: 0});
+const fmt = n => '€' + n.toLocaleString('en', {minimumFractionDigits: 2, maximumFractionDigits: 2});
 const live = ENTRIES.filter(e => e.eur != null);
 const pending = ENTRIES.length - live.length;
 
