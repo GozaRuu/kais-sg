@@ -26,7 +26,7 @@ h1{font-family:var(--serif);font-weight:400;font-size:clamp(44px,9vw,64px);line-
 .row .dt{font-family:var(--mono);font-size:11px;color:var(--ink2);white-space:nowrap}
 .row .what{font-size:14.5px}
 .row .what small{display:block;font-size:11px;color:var(--ink2)}
-.tag{font-family:var(--mono);font-size:10px;letter-spacing:.06em;border:1px solid currentColor;border-radius:3px;padding:0 5px;margin-left:8px;vertical-align:2px;white-space:nowrap}
+.tag{display:inline-block;font-family:var(--mono);font-size:10px;font-weight:500;letter-spacing:.08em;border-radius:2px;padding:1px 6px;margin-left:8px;vertical-align:2px;white-space:nowrap;color:var(--paper)}
 .row .amt{font-family:var(--mono);font-size:13px;text-align:right;white-space:nowrap}
 .row .amt.pending{color:var(--ink2);font-style:italic}
 .bal{display:grid;grid-template-columns:1fr 88px 88px 96px;gap:10px;align-items:baseline;padding:11px 0;border-bottom:1px solid var(--line)}
@@ -75,8 +75,10 @@ footer a{color:var(--accent);text-decoration:none}
 
 <script>
 const CREW = { KSG:'Kais', SKG:'Sully', SKN:'Iskan' };
-const COLOR = { KSG:'#B5442E', SKG:'#3D6B35', SKN:'#2E5A8F' };
-const tag = k => `<span class="tag" style="color:${COLOR[k]}">${k}</span>`;
+/* cinnabar · gold ochre · porcelain cobalt — 朱 金 青 */
+const COLOR = { KSG:'#BF3F26', SKG:'#B07A17', SKN:'#2F5FA3' };
+const TILT  = { KSG:'-2.5deg', SKG:'1.5deg', SKN:'-1deg' };
+const tag = k => `<span class="tag" style="background:${COLOR[k]};transform:rotate(${TILT[k]})">${k}</span>`;
 const who = k => `<span style="color:${COLOR[k]}">${CREW[k]}</span>`;
 
 /* one line per payment. eur:null = booked, amount pending. split defaults to all three.
