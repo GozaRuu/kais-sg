@@ -58,8 +58,8 @@ footer a{color:var(--accent);text-decoration:none}
 <header class="col">
   <div class="mark sc" aria-hidden="true">账</div>
   <h1>The Tally</h1>
-  <div class="sub">GOOD MEN IN THE EAST · <span class="sc" lang="zh" style="letter-spacing:.25em">东行账本</span> · EUR · SPLIT ×3</div>
-  <div class="sub" style="margin-top:6px;color:var(--accent)">LAST UPDATED · 02 SEP 2026</div>
+  <div class="sub">GOOD MEN IN THE EAST · <span class="sc" lang="zh" style="letter-spacing:.25em">东行账本</span> · EUR · ×3 UNTIL 3 SEP, ×2 AFTER</div>
+  <div class="sub" style="margin-top:6px;color:var(--accent)">LAST UPDATED · 18 SEP 2026</div>
 </header>
 
 <main class="col">
@@ -92,6 +92,10 @@ const ENTRIES = [
   { d:'27 Aug', what:'Hong Kong hotel', detail:'Rambler Oasis Hotel · 1 Tsing Yi Road, Kwai Tsing, Hong Kong · via Trip.com · Oct 26–28 · 2 nights', by:'KSG', eur:136.18 },
   { d:'02 Sep', what:'Shenzhen hotel', detail:'Aurora Boutique Apartment · Anqiao Garden, Antuoshan 7th Rd, Futian, Shenzhen · via Trip.com · Oct 28–29 · 1 night', by:'SKN', eur:34.96 },
   { d:'02 Sep', what:'Guangzhou hotel', detail:'Mihua International Apartment · 333 Gongye Ave Middle, Haizhu, Guangzhou · via Trip.com · Oct 29–31 · 2 nights', by:'SKN', eur:155.72 },
+  { d:'07 Sep', what:'Chongqing hotel', detail:'Aspera Panoramic, 24th fl · 99 Minzu Rd, Jiefangbei, Yuzhong · via Trip.com · Oct 31–Nov 2 · 2 nights · split ×2', by:'KSG', eur:145.03, split:['KSG','SKN'] },
+  { d:'07 Sep', what:'Chengdu hotel', detail:'Hanshi Hotel · 180 Wuhouci St, Wuhou, by Jinli · via Trip.com · Nov 2–4 · 2 nights · split ×2', by:'SKN', eur:68.70, split:['KSG','SKN'] },
+  { d:'07 Sep', what:"Xi'an hotel", detail:'Ruya Creative Apartment loft · Jinhui Global Center, Yanta · via Trip.com · Nov 4–6 · 2 nights · split ×2', by:'SKN', eur:93.18, split:['KSG','SKN'] },
+  { d:'07 Sep', what:'Beijing hotel', detail:'The Yard Hotel · 26 Buxiangzi Hutong, Dongcheng · via Trip.com · Nov 6–9 · 3 nights · split ×2', by:'KSG', eur:198.30, split:['KSG','SKN'] },
 ];
 
 const fmt = n => '€' + n.toLocaleString('en', {minimumFractionDigits: 2, maximumFractionDigits: 2});
